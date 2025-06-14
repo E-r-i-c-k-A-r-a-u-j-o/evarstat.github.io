@@ -3,117 +3,119 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Evarstat - Software Estadístico Moderno y Profesional</title>
-
-  <!-- SEO -->
-  <meta name="description" content="Evarstat es un software estadístico moderno y potente para análisis descriptivos, inferenciales, regresión, visualización de datos y exportación de resultados. Ideal para investigadores, docentes y profesionales.">
-  <meta name="keywords" content="Evarstat, software estadístico, análisis de datos, SPSS, Jamovi, software de estadística, análisis inferencial, análisis descriptivo, PyQt, software para tesis, exportar resultados APA, visualización de datos">
-  <meta name="author" content="E-r-i-c-k A-r-a-u-j-o">
-  <meta name="robots" content="index, follow">
-  <meta name="theme-color" content="#0056b3">
-
-  <!-- Open Graph (para Facebook y otros) -->
-  <meta property="og:title" content="Evarstat - Software Estadístico Moderno y Profesional" />
-  <meta property="og:description" content="Herramienta estadística avanzada para análisis riguroso, visualización clara y exportación profesional de resultados." />
-  <meta property="og:image" content="https://e-r-i-c-k-a-r-a-u-j-o.github.io/logo.png" />
-  <meta property="og:url" content="https://e-r-i-c-k-a-r-a-u-j-o.github.io" />
-  <meta property="og:type" content="website" />
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Evarstat - Software Estadístico Moderno y Profesional" />
-  <meta name="twitter:description" content="Software estadístico similar a SPSS y Jamovi, diseñado con PyQt, enfocado en la precisión, estética y exportación profesional." />
-  <meta name="twitter:image" content="https://e-r-i-c-k-a-r-a-u-j-o.github.io/logo.png" />
-
-  <!-- Favicon -->
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
-
-  <!-- CSS & Fonts -->
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <title>EVAR Stat - Software Estadístico Profesional</title>
+  <meta name="description" content="EVAR Stat es un software estadístico moderno y profesional para análisis de datos, diseñado para investigadores, docentes y estudiantes.">
+  <meta name="keywords" content="software estadístico, EVAR Stat, análisis de datos, SPSS alternativo, herramientas estadísticas, Jamovi, PyQt, Python estadística">
+  <meta name="author" content="E-r-i-c-k-A-r-a-u-j-o" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <link rel="stylesheet" href="estilos.css" />
+  <link rel="icon" href="logo.png" />
 </head>
 <body>
+  <div id="progress-bar"></div>
 
   <header class="navbar">
     <div class="container nav-container">
-      <img src="logo.png" alt="Evarstat" class="logo">
+      <img src="logo.png" alt="EVAR Stat Logo" class="logo" />
       <nav class="menu">
         <a href="#inicio">Inicio</a>
         <a href="#caracteristicas">Características</a>
         <a href="#capturas">Capturas</a>
         <a href="#descargas">Descargas</a>
-        <a href="#documentacion">Documentación</a>
         <a href="#contacto">Contacto</a>
       </nav>
     </div>
   </header>
 
-  <section class="hero" id="inicio">
+  <section class="hero" id="inicio" data-aos="fade-up">
     <div class="container">
-      <h1>Evarstat</h1>
-      <p>Software estadístico moderno para análisis rigurosos, visuales y profesionales. Diseñado para investigadores, docentes y profesionales que buscan precisión y claridad en sus resultados.</p>
-      <a href="#descargas" class="btn">Descargar ahora</a>
+      <h1>EVAR Stat</h1>
+      <p>Software estadístico profesional y moderno para análisis de datos.</p>
+      <a href="#descargas" class="btn">Descargar Ahora</a>
     </div>
   </section>
 
-  <section class="features" id="caracteristicas">
+  <section class="features" id="caracteristicas" data-aos="fade-up">
     <div class="container">
       <h2>Características</h2>
       <div class="grid">
         <div>
-          <h3>Análisis estadístico completo</h3>
-          <p>Incluye descriptivos, inferenciales, regresión lineal y no lineal, pruebas de hipótesis y más.</p>
+          <h3>Análisis Descriptivo</h3>
+          <p>Tablas, medidas, frecuencias, gráficos.</p>
         </div>
         <div>
-          <h3>Diseño moderno y funcional</h3>
-          <p>Interfaz basada en PyQt6, limpia y ordenada, tipo Jamovi/SPSS, con dos columnas.</p>
+          <h3>Interfaz Moderna</h3>
+          <p>Diseñada con PyQt6 + Qt Designer, amigable e intuitiva.</p>
         </div>
         <div>
-          <h3>Resultados exportables</h3>
-          <p>Exporta en Word o PDF con gráficos, tablas estilo APA y fuente Arial 11.</p>
+          <h3>Exportación</h3>
+          <p>Resultados en PDF y Word con formato APA.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="gallery-section" id="capturas">
+  <section class="gallery-section" id="capturas" data-aos="zoom-in">
     <div class="container">
-      <h2>Capturas de pantalla</h2>
+      <h2>Capturas</h2>
       <div class="gallery">
-        <img src="screenshot1.png" alt="Captura 1">
-        <img src="screenshot2.png" alt="Captura 2">
-        <img src="screenshot3.png" alt="Captura 3">
+        <img src="screenshot1.png" alt="Captura 1" />
+        <img src="screenshot2.png" alt="Captura 2" />
+        <img src="screenshot3.png" alt="Captura 3" />
       </div>
     </div>
   </section>
 
-  <section class="downloads" id="descargas">
+  <section class="downloads" id="descargas" data-aos="fade-up">
     <div class="container">
       <h2>Descargas</h2>
-      <p>Versión actual: 1.0.0 - compatible con Windows y Linux.</p>
-      <a href="https://github.com/E-r-i-c-k-A-r-a-u-j-o/evarstat/releases" class="btn-dark">Ir a descargas</a>
+      <p>Descarga la última versión de EVAR Stat para Windows.</p>
+      <a href="EVAR_Stat_instalador.exe" class="btn-dark" download>Descargar EVAR Stat</a>
     </div>
   </section>
 
-  <section class="features" id="documentacion">
-    <div class="container">
-      <h2>Documentación Técnica</h2>
-      <p>Consulta la guía oficial de uso, requerimientos, modelos implementados y fórmulas estadísticas aplicadas.</p>
-      <a href="docs/manual_evarstat.pdf" class="btn">Ver documentación</a>
-    </div>
-  </section>
-
-  <section class="contact" id="contacto">
+  <section class="contact" id="contacto" data-aos="fade-up">
     <div class="container">
       <h2>Contacto</h2>
-      <p>¿Dudas, sugerencias o soporte técnico?</p>
-      <p>Escríbenos a: <a href="mailto:contacto@evarstat.com">contacto@evarstat.com</a></p>
+      <p>¿Tienes dudas, sugerencias o deseas colaborar?</p>
+      <p>📧 <a href="mailto:evarstat@gmail.com">evarstat@gmail.com</a></p>
     </div>
   </section>
 
   <footer>
-    <p>&copy; 2025 Evarstat. Todos los derechos reservados. | <a href="#terminos">Términos y privacidad</a></p>
+    <p>© 2025 EVAR Stat. Todos los derechos reservados.</p>
+    <p><a href="#terminos">Términos y condiciones</a> | <a href="#privacidad">Política de privacidad</a></p>
   </footer>
 
+  <!-- Banner Cookies -->
+  <div id="cookie-banner">
+    <p>Este sitio usa cookies para mejorar tu experiencia. <button id="accept-cookie">Entendido</button></p>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+
+    // Barra de progreso scroll
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const widthPercent = (scrollTop / docHeight) * 100;
+      document.getElementById('progress-bar').style.width = widthPercent + '%';
+    });
+
+    // Cookies
+    document.addEventListener('DOMContentLoaded', () => {
+      if (!localStorage.getItem('cookieAccepted')) {
+        const banner = document.getElementById('cookie-banner');
+        banner.classList.add('show');
+        document.getElementById('accept-cookie').addEventListener('click', () => {
+          localStorage.setItem('cookieAccepted', 'true');
+          banner.classList.remove('show');
+        });
+      }
+    });
+  </script>
 </body>
 </html>
