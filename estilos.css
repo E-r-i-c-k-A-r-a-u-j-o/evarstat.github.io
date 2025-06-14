@@ -266,39 +266,4 @@ footer a {
     width: 100%;
     max-width: 90vw;
   }
-  /* Estilo para bordes de miniaturas */
-.gallery img {
-  border: 2px solid #ccc;
-  transition: all 0.3s ease;
-  cursor: pointer;
-}
-
-.gallery img:hover {
-  border-color: var(--azul);
-  transform: scale(1.03);
-}
-
-/* Estilo para modal de imagen */
-#imageModal {
-  display: none;
-  position: fixed;
-  z-index: 2000;
-  left: 0;
-  top: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0,0,0,0.8);
-  justify-content: center;
-  align-items: center;
-}
-
-#imageModal img {
-  max-width: 90%;
-  max-height: 90%;
-  border-radius: 10px;
-  box-shadow: 0 0 15px rgba(255,255,255,0.3);
-}
-
-#imageModal:target {
-  display: flex;
 }
