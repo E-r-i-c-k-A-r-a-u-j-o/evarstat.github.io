@@ -3,19 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="EVAR Stat es un software estadístico moderno para análisis rigurosos, gráficos, tablas y exportación profesional." />
-  <meta name="keywords" content="software estadístico, EVAR Stat, análisis de datos, gráficos estadísticos, tablas APA, exportar PDF Word" />
-  <meta name="author" content="E-r-i-c-k A-r-a-u-j-o" />
-  <title>EVAR Stat | Software Estadístico Profesional</title>
+  <meta name="description" content="EVAR Stat - Software estadístico avanzado para análisis rigurosos con visualización moderna." />
+  <meta name="keywords" content="software estadístico, EVAR Stat, análisis de datos, estadística, SPSS, Jamovi, alternativa, visualización, análisis profesional, descargar software estadístico" />
+  <meta name="author" content="Erick Araujo" />
+  <title>EVAR Stat - Software Estadístico Avanzado</title>
   <link rel="stylesheet" href="estilos.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="logo.png" />
 </head>
 <body>
 
-  <!-- Navegación -->
   <header class="navbar">
     <div class="container nav-container">
-      <img src="img/logo.png" alt="Logo EVAR Stat" class="logo">
+      <img src="logo.png" alt="EVAR Stat Logo" class="logo" />
       <nav class="menu">
         <a href="#inicio">Inicio</a>
         <a href="#caracteristicas">Características</a>
@@ -26,115 +25,85 @@
     </div>
   </header>
 
-  <!-- Hero / Presentación -->
   <section class="hero" id="inicio">
     <div class="container">
       <h1>EVAR Stat</h1>
-      <p>Software estadístico integral, moderno y profesional para análisis rigurosos, gráficos, tablas y más.</p>
+      <p>Software estadístico moderno, riguroso y visualmente profesional. Una alternativa avanzada a SPSS y Jamovi.</p>
       <a href="#descargas" class="btn">Descargar ahora</a>
     </div>
   </section>
 
-  <!-- Características -->
   <section class="features" id="caracteristicas">
     <div class="container">
-      <h2>Características</h2>
+      <h2>Características destacadas</h2>
       <div class="grid">
         <div>
-          <h3>Análisis Descriptivos</h3>
-          <p>Estadísticas básicas con visualización moderna y clara.</p>
-        </div>
-        <div>
-          <h3>Regresiones</h3>
-          <p>Lineales y no lineales, incluyendo ANOVA y VIF.</p>
-        </div>
-        <div>
-          <h3>Tablas Profesionales</h3>
-          <p>Formato estilo APA, exportables a PDF y Word.</p>
-        </div>
-        <div>
           <h3>Interfaz Moderna</h3>
-          <p>Diseño claro, organizado y fácil de usar con dos columnas.</p>
+          <p>Diseño tipo SPSS/Jamovi con mejoras visuales.</p>
+        </div>
+        <div>
+          <h3>Análisis Rigurosos</h3>
+          <p>Basado en teoría estadística sólida.</p>
+        </div>
+        <div>
+          <h3>Exportación Profesional</h3>
+          <p>Resultados exportables en PDF y Word, estilo APA.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Galería de Capturas -->
   <section class="gallery-section" id="capturas">
     <div class="container">
-      <h2>Capturas de Pantalla</h2>
+      <h2>Capturas de pantalla</h2>
       <div class="gallery">
-        <img src="img/captura1.png" alt="Captura 1">
-        <img src="img/captura2.png" alt="Captura 2">
-        <img src="img/captura3.png" alt="Captura 3">
+        <img src="screenshot1.png" alt="Captura 1" onclick="openModal(this.src)">
+        <img src="screenshot2.png" alt="Captura 2" onclick="openModal(this.src)">
+        <img src="screenshot3.png" alt="Captura 3" onclick="openModal(this.src)">
       </div>
     </div>
   </section>
 
-  <!-- Modal -->
-  <div id="imageModal" class="modal">
-    <span class="close" onclick="closeModal()">&times;</span>
-    <img id="modalImage" src="" alt="Captura ampliada">
-    <a class="prev" onclick="changeImage(-1)">&#10094;</a>
-    <a class="next" onclick="changeImage(1)">&#10095;</a>
-  </div>
-
-  <!-- Descargas -->
   <section class="downloads" id="descargas">
     <div class="container">
       <h2>Descargas</h2>
-      <p>Versión actual: 1.0. Compatible con Windows 10/11</p>
-      <a href="descargas/EVARStat-setup.exe" class="btn btn-dark">Descargar Instalador</a>
+      <p>Elige la versión según tu sistema operativo:</p>
+      <a href="evarstat-windows.zip" class="btn">Windows</a>
+      <a href="evarstat-linux.tar.gz" class="btn btn-dark">Linux</a>
     </div>
   </section>
 
-  <!-- Contacto -->
   <section class="contact" id="contacto">
     <div class="container">
       <h2>Contacto</h2>
-      <p>¿Tienes dudas o sugerencias? Escríbenos a:</p>
-      <p><a href="mailto:contacto@evarstat.com">contacto@evarstat.com</a></p>
+      <p>¿Tienes dudas o sugerencias?</p>
+      <p><strong>✉️ erickaraujo@email.com</strong></p>
     </div>
   </section>
 
-  <!-- Footer -->
   <footer>
-    <p>&copy; 2025 EVAR Stat. Todos los derechos reservados. | <a href="#">Política de Privacidad</a></p>
+    <p>&copy; 2025 EVAR Stat. Todos los derechos reservados. | <a href="#politica">Política de privacidad</a></p>
   </footer>
 
-  <!-- JS Modal Galería -->
-  <script>
-    const galleryImages = Array.from(document.querySelectorAll('.gallery img'));
-    let currentIndex = 0;
+  <!-- Modal de Imagen -->
+  <div id="imageModal" onclick="closeModal()">
+    <img id="modalImage" src="" alt="Captura ampliada">
+  </div>
 
-    function openModal(index) {
-      currentIndex = index;
+  <script>
+    function openModal(src) {
       const modal = document.getElementById('imageModal');
       const modalImg = document.getElementById('modalImage');
-      modalImg.src = galleryImages[currentIndex].src;
       modal.style.display = 'flex';
-      document.body.style.overflow = 'hidden';
+      modalImg.src = src;
     }
 
     function closeModal() {
       document.getElementById('imageModal').style.display = 'none';
-      document.body.style.overflow = 'auto';
     }
 
-    function changeImage(step) {
-      currentIndex = (currentIndex + step + galleryImages.length) % galleryImages.length;
-      document.getElementById('modalImage').src = galleryImages[currentIndex].src;
-    }
-
-    document.addEventListener('keydown', function (event) {
+    document.addEventListener('keydown', function(event) {
       if (event.key === 'Escape') closeModal();
-      if (event.key === 'ArrowRight') changeImage(1);
-      if (event.key === 'ArrowLeft') changeImage(-1);
-    });
-
-    galleryImages.forEach((img, i) => {
-      img.addEventListener('click', () => openModal(i));
     });
   </script>
 </body>
