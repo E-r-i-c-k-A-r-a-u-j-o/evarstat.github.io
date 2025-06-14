@@ -3,64 +3,91 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="EvarStat - Software de análisis estadístico moderno y completo" />
+  <title>EvarStat | Software Estadístico Avanzado</title>
+  <meta name="description" content="EvarStat: software de análisis estadístico con diseño moderno, cálculos rigurosos y visualización avanzada." />
   <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="img/logo.png" />
-  <title>EvarStat | Software Estadístico</title>
+  <link rel="icon" href="assets/logo.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
 </head>
 <body>
-  <header>
-    <nav>
-      <img src="img/logo.png" alt="EvarStat Logo" class="logo" />
-      <ul>
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#capturas">Capturas</a></li>
-        <li><a href="#descargas">Descargas</a></li>
-        <li><a href="#documentacion">Documentación</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-      </ul>
-    </nav>
+  <header class="navbar">
+    <div class="container">
+      <img src="assets/logo.png" alt="EvarStat Logo" class="logo">
+      <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#caracteristicas">Características</a>
+        <a href="#capturas">Capturas</a>
+        <a href="#descargas">Descargas</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
   </header>
 
   <section id="inicio" class="hero">
-    <div class="content">
-      <h1>EvarStat</h1>
-      <p>Software estadístico moderno, profesional y visualmente atractivo para análisis rigurosos.</p>
-      <a href="#descargas" class="btn">Descargar ahora</a>
+    <div class="container">
+      <h1 data-aos="fade-up">EvarStat</h1>
+      <p data-aos="fade-up" data-aos-delay="100">El software estadístico moderno y profesional que necesitas para análisis rigurosos y visuales impactantes.</p>
+      <a href="#descargas" class="btn" data-aos="fade-up" data-aos-delay="200">Descargar ahora</a>
     </div>
   </section>
 
-  <section id="capturas" class="section">
-    <h2>Capturas de Pantalla</h2>
-    <div class="gallery">
-      <img src="img/captura1.png" alt="Captura 1" />
-      <img src="img/captura2.png" alt="Captura 2" />
-      <img src="img/captura3.png" alt="Captura 3" />
+  <section id="caracteristicas" class="features">
+    <div class="container">
+      <h2 data-aos="fade-up">¿Por qué EvarStat?</h2>
+      <div class="grid">
+        <div data-aos="fade-right">
+          <h3>🎯 Precisión estadística</h3>
+          <p>Cálculos exactos con fundamentos teóricos sólidos y pruebas confiables.</p>
+        </div>
+        <div data-aos="fade-up">
+          <h3>📊 Visualización moderna</h3>
+          <p>Gráficos interactivos y resultados estéticamente estructurados al estilo APA.</p>
+        </div>
+        <div data-aos="fade-left">
+          <h3>🧠 Interfaz intuitiva</h3>
+          <p>Diseño tipo SPSS + Jamovi, con doble columna y resultados acumulativos.</p>
+        </div>
+      </div>
     </div>
   </section>
 
-  <section id="descargas" class="section">
-    <h2>Descargas</h2>
-    <p>Descarga la última versión del software:</p>
-    <a href="https://github.com/E-r-i-c-k-A-r-a-u-j-o/evarstat/releases" class="btn">Versión estable</a>
+  <section id="capturas" class="gallery-section">
+    <div class="container">
+      <h2 data-aos="fade-up">Capturas de pantalla</h2>
+      <div class="gallery">
+        <img src="assets/captura1.png" alt="Captura 1" data-aos="zoom-in" />
+        <img src="assets/captura2.png" alt="Captura 2" data-aos="zoom-in" data-aos-delay="100"/>
+        <img src="assets/captura3.png" alt="Captura 3" data-aos="zoom-in" data-aos-delay="200"/>
+      </div>
+    </div>
   </section>
 
-  <section id="documentacion" class="section">
-    <h2>Documentación Técnica</h2>
-    <ul>
-      <li><a href="docs/manual.pdf" target="_blank">Manual del Usuario</a></li>
-      <li><a href="docs/politica-privacidad.pdf" target="_blank">Política de Privacidad</a></li>
-    </ul>
+  <section id="descargas" class="downloads">
+    <div class="container">
+      <h2 data-aos="fade-up">Descargas</h2>
+      <p data-aos="fade-up" data-aos-delay="100">Accede a la versión más reciente:</p>
+      <a href="https://github.com/E-r-i-c-k-A-r-a-u-j-o/evarstat/releases" class="btn btn-dark" data-aos="fade-up" data-aos-delay="200">Versión estable</a>
+    </div>
   </section>
 
-  <section id="contacto" class="section">
-    <h2>Contacto</h2>
-    <p>¿Tienes preguntas o sugerencias? Escríbenos a:</p>
-    <p><a href="mailto:contacto@evarstat.com">contacto@evarstat.com</a></p>
+  <section id="contacto" class="contact">
+    <div class="container">
+      <h2 data-aos="fade-up">Contacto</h2>
+      <p data-aos="fade-up" data-aos-delay="100">¿Tienes dudas o quieres colaborar?</p>
+      <p data-aos="fade-up" data-aos-delay="200">📧 <a href="mailto:contacto@evarstat.com">contacto@evarstat.com</a></p>
+    </div>
   </section>
 
   <footer>
-    <p>&copy; 2025 EvarStat | <a href="docs/politica-privacidad.pdf">Política de Privacidad</a></p>
+    <div class="container">
+      <p>&copy; 2025 EvarStat. Todos los derechos reservados. | 
+        <a href="docs/politica-privacidad.pdf" target="_blank">Política de Privacidad</a>
+      </p>
+    </div>
   </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
 </body>
 </html>
