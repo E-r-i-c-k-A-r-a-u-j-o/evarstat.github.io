@@ -10,10 +10,6 @@
   <link rel="stylesheet" href="estilos.css" />
   <link rel="icon" type="image/png" href="logo.png" />
 </head>
-<!-- Modal Pantalla Completa -->
-<div id="imageModal" onclick="closeModal()">
-  <img id="modalImage" src="" alt="Captura ampliada">
-</div>
 <body>
 
   <header class="navbar">
@@ -110,33 +106,5 @@
       if (event.key === 'Escape') closeModal();
     });
   </script>
-  <script>
-  function openModal(src) {
-    const modal = document.getElementById('imageModal');
-    const modalImg = document.getElementById('modalImage');
-    modalImg.src = src;
-    modal.style.display = 'flex';
-
-    if (modal.requestFullscreen) {
-      modal.requestFullscreen();
-    } else if (modal.webkitRequestFullscreen) {
-      modal.webkitRequestFullscreen();
-    } else if (modal.msRequestFullscreen) {
-      modal.msRequestFullscreen();
-    }
-  }
-
-  function closeModal() {
-    const modal = document.getElementById('imageModal');
-    modal.style.display = 'none';
-    if (document.fullscreenElement) {
-      document.exitFullscreen();
-    }
-  }
-
-  document.addEventListener('keydown', function(event) {
-    if (event.key === 'Escape') closeModal();
-  });
-</script>
 </body>
 </html>
