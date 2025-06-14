@@ -3,91 +3,105 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>EvarStat | Software Estadístico Avanzado</title>
-  <meta name="description" content="EvarStat: software de análisis estadístico con diseño moderno, cálculos rigurosos y visualización avanzada." />
-  <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="assets/logo.png" />
+  <title>EvarStat - Software Estadístico</title>
+  <link rel="stylesheet" href="estilos.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
 </head>
 <body>
+
+  <!-- NAVBAR -->
   <header class="navbar">
-    <div class="container nav-container">
-      <img src="assets/logo.png" alt="EvarStat Logo" class="logo">
-      <nav class="menu">
+    <div class="nav-container container">
+      <img src="logo.png" alt="EvarStat Logo" class="logo" />
+      <nav class="menu" id="menu">
         <a href="#inicio">Inicio</a>
         <a href="#caracteristicas">Características</a>
         <a href="#capturas">Capturas</a>
         <a href="#descargas">Descargas</a>
         <a href="#contacto">Contacto</a>
       </nav>
+      <div class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </div>
     </div>
   </header>
 
-  <section id="inicio" class="hero">
+  <!-- HERO -->
+  <section class="hero" id="inicio">
     <div class="container">
-      <h1 data-aos="fade-up">EvarStat</h1>
-      <p data-aos="fade-up" data-aos-delay="100">El software estadístico moderno y profesional que necesitas para análisis rigurosos y visuales impactantes.</p>
-      <a href="#descargas" class="btn" data-aos="fade-up" data-aos-delay="200">Descargar ahora</a>
+      <h1>EvarStat</h1>
+      <p>Software estadístico moderno, potente y visualmente profesional</p>
+      <a href="#descargas" class="btn">Descargar ahora</a>
     </div>
   </section>
 
-  <section id="caracteristicas" class="features">
+  <!-- CARACTERÍSTICAS -->
+  <section class="features" id="caracteristicas">
     <div class="container">
-      <h2 data-aos="fade-up">¿Por qué EvarStat?</h2>
+      <h2>Características principales</h2>
       <div class="grid">
-        <div data-aos="fade-right">
-          <h3>🎯 Precisión estadística</h3>
-          <p>Cálculos exactos con fundamentos teóricos sólidos y pruebas confiables.</p>
+        <div>
+          <h3>Análisis Descriptivo</h3>
+          <p>Estadísticas, frecuencias, gráficos interactivos y más.</p>
         </div>
-        <div data-aos="fade-up">
-          <h3>📊 Visualización moderna</h3>
-          <p>Gráficos interactivos y resultados estéticamente estructurados al estilo APA.</p>
+        <div>
+          <h3>Muestreo</h3>
+          <p>Simple, estratificado, sistemático y por conglomerados.</p>
         </div>
-        <div data-aos="fade-left">
-          <h3>🧠 Interfaz intuitiva</h3>
-          <p>Diseño tipo SPSS + Jamovi, con doble columna y resultados acumulativos.</p>
+        <div>
+          <h3>Regresiones</h3>
+          <p>Lineales, no lineales, ANOVA y medidas avanzadas.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="capturas" class="gallery-section">
+  <!-- CAPTURAS -->
+  <section class="gallery-section" id="capturas">
     <div class="container">
-      <h2 data-aos="fade-up">Capturas de pantalla</h2>
+      <h2>Capturas del software</h2>
       <div class="gallery">
-        <img src="assets/captura1.png" alt="Captura 1" data-aos="zoom-in" />
-        <img src="assets/captura2.png" alt="Captura 2" data-aos="zoom-in" data-aos-delay="100"/>
-        <img src="assets/captura3.png" alt="Captura 3" data-aos="zoom-in" data-aos-delay="200"/>
+        <img src="screenshot1.png" alt="Captura 1" />
+        <img src="screenshot2.png" alt="Captura 2" />
+        <img src="screenshot3.png" alt="Captura 3" />
       </div>
     </div>
   </section>
 
-  <section id="descargas" class="downloads">
+  <!-- DESCARGAS -->
+  <section class="downloads" id="descargas">
     <div class="container">
-      <h2 data-aos="fade-up">Descargas</h2>
-      <p data-aos="fade-up" data-aos-delay="100">Accede a la versión más reciente:</p>
-      <a href="https://github.com/E-r-i-c-k-A-r-a-u-j-o/evarstat/releases" class="btn btn-dark" data-aos="fade-up" data-aos-delay="200">Versión estable</a>
+      <h2>Descargas</h2>
+      <p>Disponible para Windows. Próximamente para macOS y Linux.</p>
+      <a href="evarstat_instalador.exe" class="btn btn-dark">Descargar Instalador</a>
     </div>
   </section>
 
-  <section id="contacto" class="contact">
+  <!-- CONTACTO -->
+  <section class="contact" id="contacto">
     <div class="container">
-      <h2 data-aos="fade-up">Contacto</h2>
-      <p data-aos="fade-up" data-aos-delay="100">¿Tienes dudas o quieres colaborar?</p>
-      <p data-aos="fade-up" data-aos-delay="200">📧 <a href="mailto:contacto@evarstat.com">contacto@evarstat.com</a></p>
+      <h2>Contacto</h2>
+      <p>¿Dudas o sugerencias? Escríbenos a:</p>
+      <a href="mailto:contacto@evarstat.com">contacto@evarstat.com</a>
     </div>
   </section>
 
+  <!-- FOOTER -->
   <footer>
-    <div class="container">
-      <p>&copy; 2025 EvarStat. Todos los derechos reservados. | 
-        <a href="docs/politica-privacidad.pdf" target="_blank">Política de Privacidad</a>
-      </p>
-    </div>
+    <p>&copy; 2025 EvarStat. Todos los derechos reservados. <a href="#politica">Política de privacidad</a></p>
   </footer>
 
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>AOS.init();</script>
+  <!-- JS -->
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const menu = document.getElementById('menu');
+    hamburger.addEventListener('click', () => {
+      menu.classList.toggle('active');
+    });
+
+    window.addEventListener('scroll', () => {
+      document.querySelector('.navbar').classList.toggle('scrolled', window.scrollY > 10);
+    });
+  </script>
 </body>
 </html>
