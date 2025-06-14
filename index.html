@@ -3,18 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>EvarStat | Software Estadístico Avanzado</title>
-  <meta name="description" content="EvarStat: software de análisis estadístico con diseño moderno, cálculos rigurosos y visualización avanzada." />
-  <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="assets/logo.png" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
+  <title>EVAR Stat - Software Estadístico Profesional</title>
+  <meta name="description" content="EVAR Stat es un software estadístico moderno y profesional para análisis de datos, diseñado para investigadores, docentes y estudiantes.">
+  <meta name="keywords" content="software estadístico, EVAR Stat, análisis de datos, SPSS alternativo, herramientas estadísticas, Jamovi, PyQt, Python estadística">
+  <meta name="author" content="E-r-i-c-k-A-r-a-u-j-o" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <link rel="stylesheet" href="estilos.css" />
+  <link rel="icon" href="logo.png" />
 </head>
 <body>
+  <div id="progress-bar"></div>
+
   <header class="navbar">
-    <div class="container">
-      <img src="assets/logo.png" alt="EvarStat Logo" class="logo">
-      <nav>
+    <div class="container nav-container">
+      <img src="logo.png" alt="EVAR Stat Logo" class="logo" />
+      <nav class="menu">
         <a href="#inicio">Inicio</a>
         <a href="#caracteristicas">Características</a>
         <a href="#capturas">Capturas</a>
@@ -24,70 +27,95 @@
     </div>
   </header>
 
-  <section id="inicio" class="hero">
+  <section class="hero" id="inicio" data-aos="fade-up">
     <div class="container">
-      <h1 data-aos="fade-up">EvarStat</h1>
-      <p data-aos="fade-up" data-aos-delay="100">El software estadístico moderno y profesional que necesitas para análisis rigurosos y visuales impactantes.</p>
-      <a href="#descargas" class="btn" data-aos="fade-up" data-aos-delay="200">Descargar ahora</a>
+      <h1>EVAR Stat</h1>
+      <p>Software estadístico profesional y moderno para análisis de datos.</p>
+      <a href="#descargas" class="btn">Descargar Ahora</a>
     </div>
   </section>
 
-  <section id="caracteristicas" class="features">
+  <section class="features" id="caracteristicas" data-aos="fade-up">
     <div class="container">
-      <h2 data-aos="fade-up">¿Por qué EvarStat?</h2>
+      <h2>Características</h2>
       <div class="grid">
-        <div data-aos="fade-right">
-          <h3>🎯 Precisión estadística</h3>
-          <p>Cálculos exactos con fundamentos teóricos sólidos y pruebas confiables.</p>
+        <div>
+          <h3>Análisis Descriptivo</h3>
+          <p>Tablas, medidas, frecuencias, gráficos.</p>
         </div>
-        <div data-aos="fade-up">
-          <h3>📊 Visualización moderna</h3>
-          <p>Gráficos interactivos y resultados estéticamente estructurados al estilo APA.</p>
+        <div>
+          <h3>Interfaz Moderna</h3>
+          <p>Diseñada con PyQt6 + Qt Designer, amigable e intuitiva.</p>
         </div>
-        <div data-aos="fade-left">
-          <h3>🧠 Interfaz intuitiva</h3>
-          <p>Diseño tipo SPSS + Jamovi, con doble columna y resultados acumulativos.</p>
+        <div>
+          <h3>Exportación</h3>
+          <p>Resultados en PDF y Word con formato APA.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="capturas" class="gallery-section">
+  <section class="gallery-section" id="capturas" data-aos="zoom-in">
     <div class="container">
-      <h2 data-aos="fade-up">Capturas de pantalla</h2>
+      <h2>Capturas</h2>
       <div class="gallery">
-        <img src="assets/captura1.png" alt="Captura 1" data-aos="zoom-in" />
-        <img src="assets/captura2.png" alt="Captura 2" data-aos="zoom-in" data-aos-delay="100"/>
-        <img src="assets/captura3.png" alt="Captura 3" data-aos="zoom-in" data-aos-delay="200"/>
+        <img src="screenshot1.png" alt="Captura 1" />
+        <img src="screenshot2.png" alt="Captura 2" />
+        <img src="screenshot3.png" alt="Captura 3" />
       </div>
     </div>
   </section>
 
-  <section id="descargas" class="downloads">
+  <section class="downloads" id="descargas" data-aos="fade-up">
     <div class="container">
-      <h2 data-aos="fade-up">Descargas</h2>
-      <p data-aos="fade-up" data-aos-delay="100">Accede a la versión más reciente:</p>
-      <a href="https://github.com/E-r-i-c-k-A-r-a-u-j-o/evarstat/releases" class="btn btn-dark" data-aos="fade-up" data-aos-delay="200">Versión estable</a>
+      <h2>Descargas</h2>
+      <p>Descarga la última versión de EVAR Stat para Windows.</p>
+      <a href="EVAR_Stat_instalador.exe" class="btn-dark" download>Descargar EVAR Stat</a>
     </div>
   </section>
 
-  <section id="contacto" class="contact">
+  <section class="contact" id="contacto" data-aos="fade-up">
     <div class="container">
-      <h2 data-aos="fade-up">Contacto</h2>
-      <p data-aos="fade-up" data-aos-delay="100">¿Tienes dudas o quieres colaborar?</p>
-      <p data-aos="fade-up" data-aos-delay="200">📧 <a href="mailto:contacto@evarstat.com">contacto@evarstat.com</a></p>
+      <h2>Contacto</h2>
+      <p>¿Tienes dudas, sugerencias o deseas colaborar?</p>
+      <p>📧 <a href="mailto:evarstat@gmail.com">evarstat@gmail.com</a></p>
     </div>
   </section>
 
   <footer>
-    <div class="container">
-      <p>&copy; 2025 EvarStat. Todos los derechos reservados. | 
-        <a href="docs/politica-privacidad.pdf" target="_blank">Política de Privacidad</a>
-      </p>
-    </div>
+    <p>© 2025 EVAR Stat. Todos los derechos reservados.</p>
+    <p><a href="#terminos">Términos y condiciones</a> | <a href="#privacidad">Política de privacidad</a></p>
   </footer>
 
+  <!-- Banner Cookies -->
+  <div id="cookie-banner">
+    <p>Este sitio usa cookies para mejorar tu experiencia. <button id="accept-cookie">Entendido</button></p>
+  </div>
+
+  <!-- Scripts -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>AOS.init();</script>
+  <script>
+    AOS.init();
+
+    // Barra de progreso scroll
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const widthPercent = (scrollTop / docHeight) * 100;
+      document.getElementById('progress-bar').style.width = widthPercent + '%';
+    });
+
+    // Cookies
+    document.addEventListener('DOMContentLoaded', () => {
+      if (!localStorage.getItem('cookieAccepted')) {
+        const banner = document.getElementById('cookie-banner');
+        banner.classList.add('show');
+        document.getElementById('accept-cookie').addEventListener('click', () => {
+          localStorage.setItem('cookieAccepted', 'true');
+          banner.classList.remove('show');
+        });
+      }
+    });
+  </script>
 </body>
 </html>
