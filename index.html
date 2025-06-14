@@ -1,110 +1,82 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="EVAR Stat - Software estadístico avanzado para análisis rigurosos con visualización moderna." />
-  <meta name="keywords" content="software estadístico, EVAR Stat, análisis de datos, estadística, SPSS, Jamovi, alternativa, visualización, análisis profesional, descargar software estadístico" />
-  <meta name="author" content="Erick Araujo" />
-  <title>EVAR Stat - Software Estadístico Avanzado</title>
-  <link rel="stylesheet" href="estilos.css" />
-  <link rel="icon" type="image/png" href="logo.png" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="EVAR Stat: Software Estadístico moderno para análisis riguroso con una interfaz intuitiva.">
+    <meta name="keywords" content="EVAR Stat, software estadístico, análisis de datos, estadística, herramienta estadística, SPSS, Jamovi, análisis cuantitativo, descargar software estadístico, alternativa SPSS">
+    <meta name="author" content="E-r-i-c-k A-r-a-u-j-o">
+    <title>EVAR Stat - Software Estadístico Moderno</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
-  <header class="navbar">
-    <div class="container nav-container">
-      <img src="logo.png" alt="EVAR Stat Logo" class="logo" />
-      <nav class="menu">
-        <a href="#inicio">Inicio</a>
-        <a href="#caracteristicas">Características</a>
-        <a href="#capturas">Capturas</a>
-        <a href="#descargas">Descargas</a>
-        <a href="#contacto">Contacto</a>
-      </nav>
-    </div>
-  </header>
-
-  <section class="hero" id="inicio">
-    <div class="container">
-      <h1>EVAR Stat</h1>
-      <p>Software estadístico moderno, riguroso y visualmente profesional. Una alternativa avanzada a SPSS y Jamovi.</p>
-      <a href="#descargas" class="btn">Descargar ahora</a>
-    </div>
-  </section>
-
-  <section class="features" id="caracteristicas">
-    <div class="container">
-      <h2>Características destacadas</h2>
-      <div class="grid">
-        <div>
-          <h3>Interfaz Moderna</h3>
-          <p>Diseño tipo SPSS/Jamovi con mejoras visuales.</p>
+    <header class="navbar">
+        <div class="container nav-container">
+            <img src="img/logo.png" alt="Logo EVAR Stat" class="logo">
+            <nav class="menu">
+                <a href="#inicio">Inicio</a>
+                <a href="#caracteristicas">Características</a>
+                <a href="#capturas">Capturas</a>
+                <a href="#descargas">Descargas</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
         </div>
-        <div>
-          <h3>Análisis Rigurosos</h3>
-          <p>Basado en teoría estadística sólida.</p>
+    </header>
+
+    <section class="hero" id="inicio">
+        <h1>EVAR Stat</h1>
+        <p>Software estadístico moderno, profesional y riguroso para todos los análisis que necesitas.</p>
+        <a href="#descargas" class="btn">Descargar ahora</a>
+    </section>
+
+    <section class="features container" id="caracteristicas">
+        <h2>Características</h2>
+        <div class="grid">
+            <div>
+                <h3>Interfaz Moderna</h3>
+                <p>Diseño inspirado en SPSS y Jamovi, mejorado con estética actual.</p>
+            </div>
+            <div>
+                <h3>Análisis Rigurosos</h3>
+                <p>Métodos estadísticos comprobados y ajustados a teoría.</p>
+            </div>
+            <div>
+                <h3>Exportación Avanzada</h3>
+                <p>Resultados en Word y PDF con tablas, gráficos y estilo APA.</p>
+            </div>
         </div>
-        <div>
-          <h3>Exportación Profesional</h3>
-          <p>Resultados exportables en PDF y Word, estilo APA.</p>
+    </section>
+
+    <section class="gallery-section container" id="capturas">
+        <h2>Capturas de Pantalla</h2>
+        <div class="gallery">
+            <img src="img/captura1.png" alt="Captura 1" onclick="openModal(this)">
+            <img src="img/captura2.png" alt="Captura 2" onclick="openModal(this)">
         </div>
-      </div>
+    </section>
+
+    <section class="downloads container" id="descargas">
+        <h2>Descargas</h2>
+        <p>Obtén la última versión del software y comienza a analizar datos fácilmente.</p>
+        <a href="#" class="btn btn-dark">Descargar EVAR Stat</a>
+    </section>
+
+    <section class="contact container" id="contacto">
+        <h2>Contacto</h2>
+        <p>¿Tienes dudas? Escríbenos a: <a href="mailto:contacto@evarstat.com">contacto@evarstat.com</a></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 EVAR Stat. Todos los derechos reservados.</p>
+        <a href="#">Términos y condiciones</a> | <a href="#">Política de privacidad</a>
+    </footer>
+
+    <div id="modal" class="modal" onclick="closeModal()">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modal-img">
     </div>
-  </section>
 
-  <section class="gallery-section" id="capturas">
-    <div class="container">
-      <h2>Capturas de pantalla</h2>
-      <div class="gallery">
-        <img src="screenshot1.png" alt="Captura 1" onclick="openModal(this.src)">
-        <img src="screenshot2.png" alt="Captura 2" onclick="openModal(this.src)">
-        <img src="screenshot3.png" alt="Captura 3" onclick="openModal(this.src)">
-      </div>
-    </div>
-  </section>
-
-  <section class="downloads" id="descargas">
-    <div class="container">
-      <h2>Descargas</h2>
-      <p>Elige la versión según tu sistema operativo:</p>
-      <a href="evarstat-windows.zip" class="btn">Windows</a>
-      <a href="evarstat-linux.tar.gz" class="btn btn-dark">Linux</a>
-    </div>
-  </section>
-
-  <section class="contact" id="contacto">
-    <div class="container">
-      <h2>Contacto</h2>
-      <p>¿Tienes dudas o sugerencias?</p>
-      <p><strong>✉️ erickaraujo@email.com</strong></p>
-    </div>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 EVAR Stat. Todos los derechos reservados. | <a href="#politica">Política de privacidad</a></p>
-  </footer>
-
-  <!-- Modal de Imagen -->
-  <div id="imageModal" onclick="closeModal()">
-    <img id="modalImage" src="" alt="Captura ampliada">
-  </div>
-
-  <script>
-    function openModal(src) {
-      const modal = document.getElementById('imageModal');
-      const modalImg = document.getElementById('modalImage');
-      modal.style.display = 'flex';
-      modalImg.src = src;
-    }
-
-    function closeModal() {
-      document.getElementById('imageModal').style.display = 'none';
-    }
-
-    document.addEventListener('keydown', function(event) {
-      if (event.key === 'Escape') closeModal();
-    });
-  </script>
+    <script src="js/script.js"></script>
 </body>
 </html>
