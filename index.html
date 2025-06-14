@@ -3,105 +3,93 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>EvarStat - Software Estadístico</title>
-  <link rel="stylesheet" href="estilos.css" />
+  <title>Evarstat - Software Estadístico</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <!-- NAVBAR -->
   <header class="navbar">
-    <div class="nav-container container">
-      <img src="logo.png" alt="EvarStat Logo" class="logo" />
-      <nav class="menu" id="menu">
+    <div class="container nav-container">
+      <img src="logo.png" alt="Evarstat" class="logo">
+      <nav class="menu">
         <a href="#inicio">Inicio</a>
         <a href="#caracteristicas">Características</a>
         <a href="#capturas">Capturas</a>
         <a href="#descargas">Descargas</a>
+        <a href="#documentacion">Documentación</a>
         <a href="#contacto">Contacto</a>
       </nav>
-      <div class="hamburger" id="hamburger">
-        <span></span><span></span><span></span>
-      </div>
     </div>
   </header>
 
-  <!-- HERO -->
   <section class="hero" id="inicio">
     <div class="container">
-      <h1>EvarStat</h1>
-      <p>Software estadístico moderno, potente y visualmente profesional</p>
+      <h1>Evarstat</h1>
+      <p>Software estadístico moderno para análisis rigurosos, visuales y profesionales. Diseñado para investigadores, docentes y profesionales que buscan precisión y claridad en sus resultados.</p>
       <a href="#descargas" class="btn">Descargar ahora</a>
     </div>
   </section>
 
-  <!-- CARACTERÍSTICAS -->
   <section class="features" id="caracteristicas">
     <div class="container">
-      <h2>Características principales</h2>
+      <h2>Características</h2>
       <div class="grid">
         <div>
-          <h3>Análisis Descriptivo</h3>
-          <p>Estadísticas, frecuencias, gráficos interactivos y más.</p>
+          <h3>Análisis estadístico completo</h3>
+          <p>Incluye descriptivos, inferenciales, regresión lineal y no lineal, pruebas de hipótesis y más.</p>
         </div>
         <div>
-          <h3>Muestreo</h3>
-          <p>Simple, estratificado, sistemático y por conglomerados.</p>
+          <h3>Diseño moderno y funcional</h3>
+          <p>Interfaz basada en PyQt6, limpia y ordenada, tipo Jamovi/SPSS, con dos columnas.</p>
         </div>
         <div>
-          <h3>Regresiones</h3>
-          <p>Lineales, no lineales, ANOVA y medidas avanzadas.</p>
+          <h3>Resultados exportables</h3>
+          <p>Exporta en Word o PDF con gráficos, tablas estilo APA y fuente Arial 11.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CAPTURAS -->
   <section class="gallery-section" id="capturas">
     <div class="container">
-      <h2>Capturas del software</h2>
+      <h2>Capturas de pantalla</h2>
       <div class="gallery">
-        <img src="screenshot1.png" alt="Captura 1" />
-        <img src="screenshot2.png" alt="Captura 2" />
-        <img src="screenshot3.png" alt="Captura 3" />
+        <img src="screenshot1.png" alt="Captura 1">
+        <img src="screenshot2.png" alt="Captura 2">
+        <img src="screenshot3.png" alt="Captura 3">
       </div>
     </div>
   </section>
 
-  <!-- DESCARGAS -->
   <section class="downloads" id="descargas">
     <div class="container">
       <h2>Descargas</h2>
-      <p>Disponible para Windows. Próximamente para macOS y Linux.</p>
-      <a href="evarstat_instalador.exe" class="btn btn-dark">Descargar Instalador</a>
+      <p>Versión actual: 1.0.0 - compatible con Windows y Linux.</p>
+      <a href="https://github.com/E-r-i-c-k-A-r-a-u-j-o/evarstat/releases" class="btn-dark">Ir a descargas</a>
     </div>
   </section>
 
-  <!-- CONTACTO -->
+  <section class="features" id="documentacion">
+    <div class="container">
+      <h2>Documentación Técnica</h2>
+      <p>Consulta la guía oficial de uso, requerimientos, modelos implementados y fórmulas estadísticas aplicadas.</p>
+      <a href="docs/manual_evarstat.pdf" class="btn">Ver documentación</a>
+    </div>
+  </section>
+
   <section class="contact" id="contacto">
     <div class="container">
       <h2>Contacto</h2>
-      <p>¿Dudas o sugerencias? Escríbenos a:</p>
-      <a href="mailto:contacto@evarstat.com">contacto@evarstat.com</a>
+      <p>¿Dudas, sugerencias o soporte técnico?</p>
+      <p>Escríbenos a: <a href="mailto:contacto@evarstat.com">contacto@evarstat.com</a></p>
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer>
-    <p>&copy; 2025 EvarStat. Todos los derechos reservados. <a href="#politica">Política de privacidad</a></p>
+    <p>&copy; 2025 Evarstat. Todos los derechos reservados. | <a href="#terminos">Términos y privacidad</a></p>
   </footer>
 
-  <!-- JS -->
-  <script>
-    const hamburger = document.getElementById('hamburger');
-    const menu = document.getElementById('menu');
-    hamburger.addEventListener('click', () => {
-      menu.classList.toggle('active');
-    });
-
-    window.addEventListener('scroll', () => {
-      document.querySelector('.navbar').classList.toggle('scrolled', window.scrollY > 10);
-    });
-  </script>
 </body>
 </html>
