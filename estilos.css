@@ -2,7 +2,7 @@
   --azul: #0056b3;
   --azul-claro: #e9f1ff;
   --gris-claro: #f8f9fa;
-  --gris-oscuro: #1c1c1c;
+  --gris-oscuro: #343a40;
   --dorado: #f4c430;
   --texto: #1a1a1a;
   --fuente: 'Inter', sans-serif;
@@ -16,15 +16,9 @@
 
 body {
   font-family: var(--fuente);
-  background-color: white;
+  background: white;
   color: var(--texto);
   line-height: 1.6;
-  scroll-behavior: smooth;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
 }
 
 .container {
@@ -33,18 +27,6 @@ a {
   padding: 20px;
 }
 
-/* Barra de progreso */
-#progress-bar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 5px;
-  background-color: var(--dorado);
-  width: 0%;
-  z-index: 9999;
-}
-
-/* NAVBAR */
 .navbar {
   position: sticky;
   top: 0;
@@ -70,9 +52,10 @@ a {
 .menu a {
   color: var(--texto);
   margin: 0 16px;
+  text-decoration: none;
   font-weight: 500;
   position: relative;
-  padding: 12px 0;
+  padding: 8px 0;
   transition: all 0.3s ease;
 }
 
@@ -95,9 +78,8 @@ a {
   color: var(--azul);
 }
 
-/* HERO */
 .hero {
-  background: linear-gradient(to right, var(--azul), #007bff);
+  background: linear-gradient(to right, #0056b3, #007bff);
   color: white;
   text-align: center;
   padding: 100px 20px;
@@ -105,28 +87,23 @@ a {
 
 .hero h1 {
   font-size: 3rem;
-  margin-bottom: 15px;
-}
-
-.hero p {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
-}
-
-/* Botones */
-.btn, .btn-dark {
-  display: inline-block;
-  padding: 12px 25px;
-  border-radius: 5px;
-  font-weight: bold;
-  transition: all 0.3s ease;
-  cursor: pointer;
-  text-align: center;
+  margin-bottom: 10px;
 }
 
 .btn {
+  display: inline-block;
   background: var(--dorado);
   color: #000;
+  padding: 12px 25px;
+  margin-top: 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #e0b82e;
 }
 
 .btn-dark {
@@ -134,22 +111,10 @@ a {
   color: white;
 }
 
-.btn:hover {
-  transform: scale(1.05);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-
-/* SECCIONES */
 .features, .gallery-section, .downloads, .contact {
   padding: 60px 20px;
   background: var(--gris-claro);
   text-align: center;
-}
-
-.features h2, .gallery-section h2, .downloads h2, .contact h2 {
-  font-size: 2.2rem;
-  margin-bottom: 20px;
-  color: var(--azul);
 }
 
 .features .grid {
@@ -160,25 +125,10 @@ a {
   margin-top: 30px;
 }
 
-.features .grid div {
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  width: 300px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-  transition: transform 0.3s ease;
-}
-
-.features .grid div:hover {
-  transform: translateY(-5px);
-}
-
 .features h3 {
   color: var(--azul);
-  margin-bottom: 10px;
 }
 
-/* GALERÍA */
 .gallery {
   display: flex;
   gap: 20px;
@@ -189,21 +139,17 @@ a {
 .gallery img {
   width: 300px;
   border-radius: 10px;
+  border: 2px solid #ccc;
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 .gallery img:hover {
+  border-color: var(--azul);
   transform: scale(1.03);
 }
 
-/* CONTACTO */
-.contact p a {
-  color: var(--azul);
-  font-weight: bold;
-}
-
-/* FOOTER */
 footer {
   background: var(--gris-oscuro);
   color: white;
@@ -217,36 +163,27 @@ footer a {
   text-decoration: none;
 }
 
-/* COOKIES */
-#cookie-banner {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(0, 0, 0, 0.85);
-  color: white;
-  padding: 15px 20px;
-  text-align: center;
-  font-size: 0.9rem;
+/* Modal */
+#imageModal {
   display: none;
-  z-index: 9999;
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.8);
+  justify-content: center;
+  align-items: center;
 }
 
-#cookie-banner.show {
-  display: block;
+#imageModal img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(255,255,255,0.3);
 }
 
-#cookie-banner button {
-  margin-left: 15px;
-  background: var(--dorado);
-  border: none;
-  padding: 8px 16px;
-  border-radius: 4px;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-/* RESPONSIVE */
 @media (max-width: 768px) {
   .features .grid {
     flex-direction: column;
@@ -255,11 +192,6 @@ footer a {
 
   .hero h1 {
     font-size: 2rem;
-  }
-
-  .menu {
-    flex-direction: column;
-    align-items: flex-start;
   }
 
   .gallery img {
