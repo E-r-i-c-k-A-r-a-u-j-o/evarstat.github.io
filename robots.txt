@@ -1,5 +1,5 @@
-# Permitir a todos los bots indexar todo el sitio
 User-agent: *
 Allow: /
+Allow: /*.pdf$
 
 Sitemap: https://evarstat.com/sitemap.xml
