@@ -24,4 +24,28 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+  <url>
+    <loc>https://evarstat.com/faq.html</loc>
+    <lastmod>2025-06-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://evarstat.com/Manual_Uso.pdf</loc>
+    <lastmod>2025-06-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://evarstat.com/Documentacion_Plugin.pdf</loc>
+    <lastmod>2025-06-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://evarstat.com/Crear_Subir_Plugin.pdf</loc>
+    <lastmod>2025-06-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
 </urlset>
