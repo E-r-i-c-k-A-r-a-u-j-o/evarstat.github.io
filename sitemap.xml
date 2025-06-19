@@ -49,6 +49,9 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <url><loc>https://evarstat.com/blog/evaluacion-software-estadistico-completo.html</loc></url>
+    <loc>https://evarstat.com/blog/evaluacion-software-estadistico-completo.html</loc>
+    <lastmod>2025-06-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>
