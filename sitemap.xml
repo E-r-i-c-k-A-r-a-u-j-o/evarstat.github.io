@@ -54,4 +54,10 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+  <url>
+  <loc>https://evarstat.com/download/EVAR-Stat-1.0.0-winx64.exe</loc>
+  <lastmod>2025-06-19</lastmod>
+  <changefreq>yearly</changefreq>
+  <priority>0.4</priority>
+</url>
 </urlset>
