@@ -2,108 +2,238 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
+  <meta http-equiv="Content-Language" content="es">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Seguridad al descargar EVAR Stat</title>
-  <meta name="description" content="Guía segura para instalar EVAR Stat sin alertas de navegador o antivirus.">
+  <title>EVAR Stat - Software Estadístico</title>
+  <meta name="description" content="EVAR Stat es un software estadístico moderno y profesional para análisis de datos, diseñado para investigadores, docentes y estudiantes.">
+  <meta name="keywords" content="EVAR Stat, software estadístico, análisis de datos, tablas, gráficos, exportar PDF, Word, SPSS, Jamovi, tesis, investigación">
+  <meta name="author" content="Erick Araujo">
+  <meta name="robots" content="index, follow">
+
+  <!-- Canonical URL (ajusta según la página) -->
+  <link rel="canonical" href="https://evarstat.com/faq.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="EVAR Stat - Software Estadístico" />
+  <meta property="og:description" content="Software estadístico moderno para análisis de datos, ideal para estudiantes, investigadores y empresas." />
+  <meta property="og:image" content="https://evarstat.com/evarstat-estadistica.png" />
+  <meta property="og:url" content="https://evarstat.com/faq.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="EVAR Stat" />
+  <meta property="og:locale" content="es_ES" />
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="EVAR Stat - Software Estadístico" />
+  <meta name="twitter:description" content="EVAR Stat es un software estadístico profesional para análisis de datos, con resultados exportables." />
+  <meta name="twitter:image" content="https://evarstat.com/evarstat-estadistica.png" />
+
+  <!-- Sitemap y robots -->
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="https://evarstat.com/sitemap.xml" />
+  <link rel="robots" href="https://evarstat.com/robots.txt" />
+
+  <!-- Favicon e iconos -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="evarstat-logo.png">
+  <link rel="shortcut icon" href="https://evarstat.com/favicon.ico" type="image/x-icon">
+
+  <!-- Google Analytics (opcional) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4DGWQHFF2H"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-4DGWQHFF2H');
+  </script>
+
+  <!-- JSON-LD Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "EVAR Stat",
+    "url": "https://evarstat.com",
+    "applicationCategory": "EducationalApplication",
+    "operatingSystem": "Windows",
+    "description": "EVAR Stat es un software estadístico moderno y profesional para análisis de datos, diseñado para investigadores, docentes y estudiantes.",
+    "image": "https://evarstat.com/evarstat-logo.png",
+    "author": {
+      "@type": "Person",
+      "name": "Erick Araujo"
+    },
+    "license": "https://evarstat.com/licencia.html"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "EVAR Stat",
+    "alternateName": "EVAR Stat - Software Estadístico",
+    "url": "https://evarstat.com"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "EVAR Stat",
+    "url": "https://evarstat.com/",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://evarstat.com/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Inicio",
+      "item": "https://evarstat.com/"
+    },{
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Descargas",
+      "item": "https://evarstat.com/descargas.html"
+    }]
+  }
+  </script>
+
+  <!-- Estilos -->
   <link rel="stylesheet" href="estilos.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
   <style>
-    .seguridad {
-      padding: 3rem 1rem;
-      max-width: 900px;
-      margin: auto;
-      font-family: "Segoe UI", sans-serif;
-      line-height: 1.7;
-    }
-    .seguridad h1 {
-      text-align: center;
-      margin-bottom: 2rem;
-    }
-    .alerta {
-      background-color: #fff3cd;
-      padding: 1rem;
-      border-left: 5px solid #f0ad4e;
-      margin-bottom: 1.5rem;
-      border-radius: 4px;
-    }
-    .navegador {
-      background-color: #f8f9fa;
-      border: 1px solid #ccc;
-      padding: 1.2rem;
-      border-radius: 6px;
-      margin-bottom: 2rem;
-    }
-    .navegador img {
-      max-width: 100%;
-      border: 1px solid #ddd;
-      border-radius: 4px;
-      margin-top: 1rem;
-    }
-    .boton-volver {
-      display: block;
-      width: fit-content;
-      margin: 2rem auto 0;
-      padding: 0.6rem 1.2rem;
-      background-color: #1976d2;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-    }
+
+
+  .seguridad {
+    padding: 3rem 1rem;
+    max-width: 900px;
+    margin: auto;
+    font-family: "Segoe UI", sans-serif;
+    line-height: 1.7;
+  }
+  .seguridad h1,
+  .card h2 {
+    color: #111;
+    font-weight: 700;
+  }
+  .alerta {
+    background-color: #fff3cd;
+    padding: 1rem;
+    border-left: 5px solid #f0ad4e;
+    margin-bottom: 2rem;
+    border-radius: 4px;
+    font-size: 1.1rem;
+  }
+  .card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(25, 118, 210, 0.07);
+    margin-bottom: 2rem;
+    padding: 2rem 1.5rem;
+  }
+  .menu a {
+    white-space: nowrap;
+  }
+    
+  a, .seguridad a, .card a {
+    color: #111;
+    text-decoration: underline;
+    transition: color 0.2s;
+  }
+
   </style>
 </head>
 
 <body>
-  <div class="seguridad">
-    <h1>🔐 ¿Tu navegador bloqueó EVAR Stat?</h1>
+  <!-- Barra de navegación -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <img src="evarstat-logo.png" alt="EVAR Stat" class="logo" />
+      <nav class="menu" id="menu">
+        <a href="index.html#inicio">Inicio</a>
+        <a href="index.html#caracteristicas">Características</a>
+        <a href="index.html#capturas">Capturas</a>
+        <a href="index.html#descargas">Descargas</a>
+        <a href="seguridad.html">Instalación segura</a>
+        <a href="index.html#documentacion">Documentación</a>
+        <a href="index.html#contacto">Contacto</a>
+      </nav>
+      <button class="menu-toggle" id="menu-toggle">&#9776;</button>
+    </div>
+  </header>
+
+  <main class="seguridad">
+    <h1>¿Tu navegador bloqueó EVAR Stat?</h1>
 
     <div class="alerta">
       <strong>¡No te preocupes!</strong> Algunos navegadores o Windows muestran advertencias porque EVAR Stat es nuevo y gratuito. El archivo es seguro y puedes descargarlo sin riesgos.
     </div>
 
-    <h2>📌 ¿Por qué aparece el mensaje?</h2>
-    <ul>
-      <li>El archivo no tiene firma digital porque es un proyecto <strong>gratuito y sin fines de lucro</strong>.</li>
-      <li>Microsoft y algunos navegadores bloquean programas que <strong>no son muy descargados todavía</strong>.</li>
-    </ul>
+    <section class="card">
+      <ul>
+        <li>El archivo no contiene la costosa firma digital porque es un proyecto gratuito y sin fines de lucro.</li>
+        <li>EVAR Stat fue desarrollado por un profesional en estadística y programación. No contiene virus, no se conecta a internet ni recopila datos.</li>
+      </ul>
+    </section>
 
-    <h2>✅ Cómo permitir la descarga</h2>
+    <section class="card">
+      <h2>Cómo permitir la descarga</h2>
+      <div class="navegador">
+        <h3>🟦 Microsoft Edge</h3>
+        <ol>
+          <li>Haz clic en <strong>“Ver más”</strong>.</li>
+          <li>Luego en <strong>“Conservar”</strong>.</li>
+          <li>Y finalmente en <strong>“Conservar de todas formas”</strong>.</li>
+        </ol>
+      </div>
+      <div class="navegador">
+        <h3>🔴 Google Chrome</h3>
+        <ol>
+          <li>Haz clic en la flecha ⬇️ al lado del archivo bloqueado.</li>
+          <li>Selecciona <strong>“Conservar”</strong>.</li>
+          <li>Luego haz clic en <strong>“Conservar de todas formas”</strong>.</li>
+        </ol>
+      </div>
+      <div class="navegador">
+        <h3>🪟 Windows (SmartScreen)</h3>
+        <ol>
+          <li>Haz doble clic en el archivo descargado.</li>
+          <li>Haz clic en <strong>“Más información”</strong>.</li>
+          <li>Luego haz clic en <strong>“Ejecutar de todas formas”</strong>.</li>
+        </ol>
+      </div>
+    </section>
 
-    <div class="navegador">
-      <h3>🧭 En Microsoft Edge</h3>
-      <ol>
-        <li>Haz clic en <strong>“Ver más”</strong>.</li>
-        <li>Luego en <strong>“Conservar”</strong>.</li>
-        <li>Y finalmente en <strong>“Conservar de todas formas”</strong>.</li>
-      </ol>
-      <img src="img/descarga-edge.png" alt="Pasos en Edge">
-    </div>
+    <section class="card">
+      <h3>¿Dudas o sugerencias?</h3>
+      <p>Escríbenos a <a href="mailto:statistics.earaujor@gmail.com">statistics.earaujor@gmail.com</a> o visita la sección de <a href="faq.html">preguntas frecuentes</a>.</p>
+    </section>
+  </main>
 
-    <div class="navegador">
-      <h3>🌐 En Google Chrome</h3>
-      <ol>
-        <li>Haz clic en la flecha ⬇️ al lado del archivo bloqueado.</li>
-        <li>Selecciona <strong>“Conservar”</strong>.</li>
-        <li>Luego haz clic en <strong>“Conservar de todas formas”</strong>.</li>
-      </ol>
-      <img src="img/descarga-chrome.png" alt="Pasos en Chrome">
-    </div>
+  <!-- Script para menú responsive igual que en index.html -->
+  <script>
+    // Menú responsive
+    const menuToggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('menu');
+    menuToggle.addEventListener('click', () => {
+      menu.classList.toggle('show');
+    });
 
-    <div class="navegador">
-      <h3>💻 En Windows (SmartScreen)</h3>
-      <ol>
-        <li>Haz doble clic en el archivo descargado.</li>
-        <li>Haz clic en <strong>“Más información”</strong>.</li>
-        <li>Luego haz clic en <strong>“Ejecutar de todas formas”</strong>.</li>
-      </ol>
-      <img src="img/smartscreen.png" alt="Pasos SmartScreen">
-    </div>
-
-    <h2>🧠 ¿Es seguro instalarlo?</h2>
-    <p>Sí. EVAR Stat fue desarrollado por un profesional en estadística y programación. No contiene virus, no se conecta a internet ni recopila datos. Su código está disponible en <a href="https://github.com/E-r-i-c-k-A-r-a-u-j-o/evarstat" target="_blank">GitHub</a>.</p>
-
-    <h2>💬 ¿Dudas o sugerencias?</h2>
-    <p>Escríbenos a <a href="mailto:statistics.earaujor@gmail.com">statistics.earaujor@gmail.com</a> o visita la sección de <a href="faq.html">preguntas frecuentes</a>.</p>
-
-    <a href="index.html" class="boton-volver">⬅️ Volver a EVAR Stat</a>
-  </div>
+    // Efecto sticky animado en la navbar
+    window.addEventListener('scroll', function() {
+      const navbar = document.querySelector('.navbar');
+      if (window.scrollY > 20) {
+        navbar.classList.add('sticky-anim');
+      } else {
+        navbar.classList.remove('sticky-anim');
+      }
+    });
+  </script>
 </body>
 </html>
