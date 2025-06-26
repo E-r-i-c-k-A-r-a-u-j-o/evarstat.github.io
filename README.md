@@ -10,15 +10,15 @@ Brindar una alternativa gratuita, completa y moderna para el análisis estadíst
 
 ## ✨ Características destacadas
 
-- ✅ Interfaz moderna, con estilo visual profesional y amigable.
-- 📊 Módulos de análisis **descriptivo**, **inferencial**, **relacional** y **regresión**.
-- 🧮 Cálculos estadísticos con tablas, gráficos interactivos y exportación a Word y PDF.
-- 🔌 Soporte para **plugins** para extender la funcionalidad del software.
-- 🔁 Multilenguaje (Español, Inglés, entre otros).
-- 📂 Importación de datos desde CSV, Excel, R, SPSS, SAS, y bases de datos.
-- 📦 Empaquetado como ejecutable (.exe) y en desarrollo para versiones Mac/Linux.
-- 🧪 Pruebas de confiabilidad y validez (alfa de Cronbach, V de Aiken, CVC, IC, Kappa de Fleiss).
-- 📁 Compatible con archivos `.evar` como extensión propia de proyecto.
+- Interfaz moderna, con estilo visual profesional y amigable.
+- Módulos de análisis **descriptivo**, **inferencial**, **relacional** y **regresión**.
+- Cálculos estadísticos con tablas, gráficos interactivos y exportación a Word y PDF.
+- Soporte para **plugins** para extender la funcionalidad del software.
+- Multilenguaje (Español, Inglés, entre otros).
+- Importación de datos desde CSV, Excel, R, SPSS, SAS, y bases de datos.
+- Empaquetado como ejecutable (.exe) y en desarrollo para versiones Mac/Linux.
+- Pruebas de confiabilidad y validez (alfa de Cronbach, V de Aiken, CVC, IC, Kappa de Fleiss).
+- Compatible con archivos `.evar` como extensión propia de proyecto.
 
 ---
 
