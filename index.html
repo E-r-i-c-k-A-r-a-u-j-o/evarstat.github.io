@@ -192,12 +192,12 @@
     <div class="container">
       <h2 data-aos="fade-right">Descargar</h2>
       <a href="https://github.com/E-r-i-c-k-A-r-a-u-j-o/evarstat.github.io/releases/download/v1.0.0/EVARStat-1.0.0-winx64.exe" 
-        class="btn-dark" 
-        download 
-        onclick="window.open('https://evarstat.com/instalacion-segura.html', '_blank');" 
-        data-aos="zoom-in" 
-        data-aos-delay="200">
-        EVARStat-1.0.0-winx64.exe
+         class="btn-dark"
+         download
+         onclick="gtag('event', 'descarga_evarstat', { 'event_category': 'Descargas', 'event_label': 'EVARStat-1.0.0-winx64.exe' }); window.open('https://evarstat.com/instalacion-segura.html', '_blank');"
+         data-aos="zoom-in" 
+         data-aos-delay="200">
+         EVARStat-1.0.0-winx64.exe
       </a>
     </div>
   </section>
@@ -234,32 +234,45 @@
 </section>
 
   <!-- Plugins y Extensiones -->
-  <section class="plugins" id="plugins" data-aos="fade-up">
-    <div class="container">
-      <h2>Plugins</h2>
-      <p>Descarga plugins desarrollados por la comunidad o contribuye con los tuyos en nuestro <a href="https://github.com/E-r-i-c-k-A-r-a-u-j-o/evarstat-plugins/tree/main/plugins" target="_blank">repositorio de plugins en GitHub</a>.</p>
-      <ul>
-        <li>
-          <strong>Generador de datos aleatorios:</strong>
-          <a href="Ramdon.zip" download>Descargar</a>
-        </li>
-        <li>
-          <strong>Confeti de celebración:</strong>
-          <a href="Celebration.zip" download>Descargar</a>
-        </li>
-        <li>
-          <strong>Creador de diagrama de flujo:</strong>
-          <a href="DiamFlujo.zip" download>Descargar</a>
-        </li>
-      </ul>
-    </div>
-  </section>
+<section class="plugins" id="plugins" data-aos="fade-up">
+  <div class="container">
+    <h2>Plugins</h2>
+    <p>Descarga plugins desarrollados por la comunidad o contribuye con los tuyos en nuestro 
+      <a href="https://github.com/E-r-i-c-k-A-r-a-u-j-o/evarstat-plugins/tree/main/plugins" target="_blank">repositorio de plugins en GitHub</a>.
+    </p>
+    <ul>
+      <li>
+        <strong>Generador de datos aleatorios:</strong>
+        <a href="Ramdon.zip" download 
+           onclick="gtag('event', 'descarga_plugin', {
+             'event_category': 'Plugins',
+             'event_label': 'Generador de datos aleatorios - Ramdon.zip'
+           });">
+           Descargar
+        </a>
+      </li>
+      <li>
+        <strong>Confeti de celebración:</strong>
+        <a href="Celebration.zip" download 
+           onclick="gtag('event', 'descarga_plugin', {
+             'event_category': 'Plugins',
+             'event_label': 'Confeti de celebración - Celebration.zip'
+           });">
+           Descargar
+        </a>
+      </li>
+      <li>
+        <strong>Creador de diagrama de flujo:</strong>
+        <a href="DiamFlujo.zip" download 
+           onclick="gtag('event', 'descarga_plugin', {
+             'event_category': 'Plugins',
+             'event_label': 'Creador de diagrama de flujo - DiamFlujo.zip'
+           });">
 
   <!-- Pie de página -->
   <footer>
     <div class="container">
       <p>© 2025 EVAR Stat. Todos los derechos reservados.</p>
-      </p>
     </div>
   </footer>
 
