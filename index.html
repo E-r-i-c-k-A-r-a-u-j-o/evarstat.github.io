@@ -141,20 +141,37 @@
       <button class="menu-toggle" id="menu-toggle">&#9776;</button>
     </div>
   </header>
-
-  <!-- Banner de Novedades -->
-  <div id="novedades-banner" style="background: linear-gradient(90deg, #0f2027 0%, #1976d2 60%, #43cea2 100%); color: #fff; text-align: center; padding: 18px 8px; font-size: 1.18em; font-weight: bold; letter-spacing: 1px; position: relative; box-shadow: 0 4px 24px rgba(25,118,210,0.10);">
-    <span style="font-size:1.3em;vertical-align:middle;">🚀</span>
-    <span style="font-size:1.15em;vertical-align:middle;">
-      <span style="color:#ffd600;">¡Prepárate para la revolución en estadística!</span>
-      <br>
-      Muy pronto llega <span style="color:#ffd600;">EVAR Stat con Inteligencia Artificial</span>.<br>
-      Interpreta y comprende tus resultados como nunca antes: <span style="color:#43cea2;">análisis automáticos, explicaciones inteligentes y recomendaciones personalizadas</span>.<br>
-      <span style="color:#ffd600;">¡La estadística del futuro, hoy!</span>
+  
+  <!-- Banner de Novedades Flotante -->
+  <div id="novedades-banner" style="
+    position: fixed;
+    left: 50%;
+    bottom: 32px;
+    transform: translateX(-50%);
+    z-index: 9999;
+    background: linear-gradient(90deg, #0f2027 0%, #1976d2 60%, #43cea2 100%);
+    color: #fff;
+    padding: 20px 32px 20px 48px;
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(25,118,210,0.18);
+    font-size: 1.13em;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    max-width: 95vw;
+    min-width: 320px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+  ">
+    <span style="font-size:1.7em; margin-right:18px;">🤖</span>
+    <span>
+      <span style="color:#ffd600;">¡NOVEDADES!</span> Muy pronto llega <span style="color:#ffd600;">EVAR Stat con Inteligencia Artificial</span>.<br>
+      <span style="font-weight:400;">Interpreta y comprende tus resultados como nunca antes: análisis automáticos, explicaciones inteligentes y recomendaciones personalizadas.<br>
+      <span style="color:#ffd600;">¡La estadística del futuro, hoy!</span></span>
     </span>
-    <button onclick="document.getElementById('novedades-banner').style.display='none';" style="position:absolute;right:12px;top:8px;background:none;border:none;color:#fff;font-size:1.3em;cursor:pointer;">&times;</button>
+    <button onclick="document.getElementById('novedades-banner').style.display='none';"
+      style="position:absolute;top:8px;right:18px;background:none;border:none;color:#fff;font-size:1.5em;cursor:pointer;line-height:1;">&times;</button>
   </div>
-
   
   <!-- Hero -->
 <section class="hero" id="inicio" data-aos="fade-up">
