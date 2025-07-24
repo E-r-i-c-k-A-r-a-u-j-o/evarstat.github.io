@@ -156,6 +156,68 @@
     <button onclick="cerrarBanner()" class="cerrar">&times;</button>
   </div>
 
+  <!-- Estilos CSS -->
+  <style>
+  .novedades-banner {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    background: linear-gradient(90deg, #12526d 0%, #1976d2 60%, #14a9ca 100%);
+    color: #fff;
+    padding: 20px 32px 20px 48px;
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(25,118,210,0.18);
+    font-size: 1.13em;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    max-width: 95vw;
+    min-width: 320px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    transform: translate(-50%, -60%);
+    transition: all 0.6s ease;
+    pointer-events: none;
+  }
+  .novedades-banner.show {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+    pointer-events: auto;
+  }
+  .novedades-banner.hide {
+    opacity: 0;
+    transform: translate(-50%, -40%);
+    pointer-events: none;
+  }
+  .novedades-banner .emoji {
+    font-size: 2.7em;
+    margin-right: 18px;
+  }
+  .novedades-banner .titulo {
+    color: #ffd600;
+  }
+  .novedades-banner .destacado {
+    color: #ffd600;
+  }
+  .novedades-banner .subtexto {
+    font-weight: 400;
+  }
+  .novedades-banner .cerrar {
+    position: absolute;
+    top: 8px;
+    right: 18px;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5em;
+    cursor: pointer;
+    line-height: 1;
+  }
+  </style>
+
   <!-- Script para animación de salida -->
   <script>
   function cerrarBanner() {
