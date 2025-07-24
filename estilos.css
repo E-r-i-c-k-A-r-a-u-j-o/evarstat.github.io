@@ -543,6 +543,7 @@ html {
   margin-left: 1.5rem;
 }
 
+<style>
 .novedades-banner {
   position: fixed;
   left: 50%;
@@ -601,3 +602,4 @@ html {
   cursor: pointer;
   line-height: 1;
 }
+</style>
