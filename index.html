@@ -135,98 +135,12 @@
         <a href="#caracteristicas">Características</a>
         <a href="#descargas">Descargas</a>
         <a href="instalacion-segura.html">Instalación segura</a>
-        <a href="#documentacion">Documentación</a>
+        <a href="#novedades">Novedades</a>
         <a href="#contacto">Contacto</a>
       </nav>
       <button class="menu-toggle" id="menu-toggle">&#9776;</button>
     </div>
   </header>
-
-    <!-- Banner de Novedades -->
-  <div id="novedades-banner" class="novedades-banner show">
-    <img src="robot-hello.gif" alt="Robot animado" class="emoji" style="height: 2.7em; margin-right: 18px;">
-    <div style="width:100%;">
-      <div style="text-align:center; font-size:1.3em; color:#ffd600; font-weight:bold; margin-bottom:0;">
-        ¡NOVEDADES!
-      </div>
-      <div style="font-size:1.1em; text-align:left; font-weight:normal;">
-        Pronto se lanzará EVAR Stat con inteligencia artificial integrada, lo que facilitará significativamente la interpretación y comprensión de tus resultados.
-      </div>
-    </div>
-    <button onclick="cerrarBanner()" class="cerrar">&times;</button>
-  </div>
-
-  <!-- Estilos CSS -->
-  <style>
-  .novedades-banner {
-    position: fixed;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 9999;
-    background: linear-gradient(90deg, #12526d 0%, #1976d2 60%, #14a9ca 100%);
-    color: #fff;
-    padding: 20px 32px 20px 48px;
-    border-radius: 18px;
-    box-shadow: 0 8px 32px rgba(25,118,210,0.18);
-    font-size: 1.13em;
-    font-weight: 600;
-    letter-spacing: 0.5px;
-    max-width: 95vw;
-    min-width: 320px;
-    text-align: left;
-    display: flex;
-    align-items: center;
-    opacity: 0;
-    transform: translate(-50%, -60%);
-    transition: all 0.6s ease;
-    pointer-events: none;
-  }
-  .novedades-banner.show {
-    opacity: 1;
-    transform: translate(-50%, -50%);
-    pointer-events: auto;
-  }
-  .novedades-banner.hide {
-    opacity: 0;
-    transform: translate(-50%, -40%);
-    pointer-events: none;
-  }
-  .novedades-banner .emoji {
-    font-size: 2.7em;
-    margin-right: 18px;
-  }
-  .novedades-banner .titulo {
-    color: #ffd600;
-  }
-  .novedades-banner .destacado {
-    color: #ffd600;
-  }
-  .novedades-banner .subtexto {
-    font-weight: 400;
-  }
-  .novedades-banner .cerrar {
-    position: absolute;
-    top: 8px;
-    right: 18px;
-    background: none;
-    border: none;
-    color: #fff;
-    font-size: 1.5em;
-    cursor: pointer;
-    line-height: 1;
-  }
-  </style>
-
-  <!-- Script para animación de salida -->
-  <script>
-  function cerrarBanner() {
-    const banner = document.getElementById('novedades-banner');
-    banner.classList.remove('show');
-    banner.classList.add('hide');
-    setTimeout(() => banner.style.display = 'none', 600);
-  }
-  </script>
 
   <!-- Hero -->
 <section class="hero" id="inicio" data-aos="fade-up">
@@ -364,6 +278,30 @@
         </a>
       </li>
     </ul>
+  </div>
+</section>
+
+<!-- Novedades -->
+<section class="novedades" id="novedades" data-aos="fade-up">
+  <div class="container">
+    <h2 data-aos="fade-right" style="font-size:2.2rem; color:#1976d2; font-weight:800; margin-bottom:1.2rem; text-align:center;">
+      Novedades
+    </h2>
+    <div class="novedades-cards">
+      <div class="novedad-card" data-aos="zoom-in" data-aos-delay="100" style="display: flex; align-items: center;">
+        <img src="robot-hello.gif" alt="Robot animado" class="emoji" style="height: 5.5em; margin-right: 28px;">
+        <div>
+          <div class="novedad-titulo">¡EVAR Stat con IA!</div>
+          <div class="novedad-desc">Pronto lanzaremos EVAR Stat con inteligencia artificial integrada, lo que facilitará significativamente la interpretación y comprensión de tus resultados.</div>
+        </div>
+      </div>
+      <div class="novedad-card" data-aos="zoom-in" data-aos-delay="200">
+        <div>
+          <div class="novedad-titulo">¡Nos actualizamos!</div>
+          <div class="novedad-desc">Disfruta de EVAR Stat 1.1.0. Se añadieron nuevas mejoras para que tu experiencia sea más agradable. Seguiremos mejorando para ofrecerte lo mejor.</div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
