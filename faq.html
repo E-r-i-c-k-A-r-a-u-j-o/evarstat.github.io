@@ -59,7 +59,7 @@
     "image": "https://evarstat.com/evarstat-logo.png",
     "author": {
       "@type": "Person",
-      "name": "Erick Araujo"
+      "name": "ERICK VICTOR ARAUJO RIVASPLATA"
     },
     "license": "https://evarstat.com/licencia.html"
   }
@@ -359,6 +359,55 @@
   </style>
 </head>
 <body>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-database-compat.js"></script>
+  <script>
+    // Configuración del proyecto
+    const firebaseConfig = {
+      apiKey: "AIzaSyD91BEba43lxr-kEqgibgRLyV9v-HiRaP4",
+      authDomain: "evar-stat.firebaseapp.com",
+      databaseURL: "https://evar-stat-default-rtdb.firebaseio.com", 
+      projectId: "evar-stat",
+      storageBucket: "evar-stat.firebasestorage.app",
+      messagingSenderId: "697146517077",
+      appId: "1:697146517077:web:55dfce33c4fde85b4b56dc",
+      measurementId: "G-10JMJ80QFT"
+    };
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.database();
+
+    function addFaqQuestion(question, email, callback) {
+      db.ref('faq').push({ question, email, answers: [] }, callback);
+    }
+
+    function addFaqAnswer(faqId, text, email, callback) {
+      db.ref(`faq/${faqId}/answers`).once('value', snap => {
+        const answers = snap.val() || [];
+        answers.push({ text, email });
+        db.ref(`faq/${faqId}/answers`).set(answers, callback);
+      });
+    }
+
+    function deleteFaqQuestion(faqId, callback) {
+      db.ref(`faq/${faqId}`).remove(callback);
+    }
+
+    function deleteFaqAnswer(faqId, answerIdx, callback) {
+      db.ref(`faq/${faqId}/answers`).once('value', snap => {
+        const answers = snap.val() || [];
+        answers.splice(answerIdx, 1);
+        db.ref(`faq/${faqId}/answers`).set(answers, callback);
+      });
+    }
+
+    function getFaqData(callback) {
+      db.ref('faq').on('value', snapshot => {
+        const data = snapshot.val() || {};
+        const arr = Object.entries(data).map(([id, value]) => ({ id, ...value }));
+        callback(arr.reverse());
+      });
+    }
+  </script>
   <div class="faq-search-fixed">
     <div class="faq-search-box">
       <input type="text" id="faq-search" placeholder="Buscar palabra">
@@ -384,21 +433,14 @@
     function clearCurrentUser() {
       localStorage.removeItem('faqCurrentUser');
     }
-    function getFaqData() {
-      return JSON.parse(localStorage.getItem('communityFaq') || '[]');
-    }
-    function setFaqData(data) {
-      localStorage.setItem('communityFaq', JSON.stringify(data));
-    }
     function getNameFromEmail(email) {
       if (!email) return '';
       return email.split('@')[0];
     }
 
-    // Estado de búsqueda
     let searchTerm = "";
+    let lastFaqData = []; // Mantén los datos actuales para búsquedas y acciones
 
-    // Renderizar identidad
     function renderIdentityBox() {
       const box = document.getElementById('identity-box');
       const currentUser = getCurrentUser();
@@ -412,7 +454,6 @@
           if (confirm('¿Seguro que deseas cambiar tu identidad?')) {
             clearCurrentUser();
             renderIdentityBox();
-            renderFaq();
           }
         };
       } else {
@@ -428,7 +469,6 @@
           if (email && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
             setCurrentUser(email);
             renderIdentityBox();
-            renderFaq();
           } else {
             alert("Por favor, ingresa un correo válido.");
           }
@@ -437,9 +477,9 @@
     }
 
     // Renderizar preguntas y respuestas (con búsqueda)
-    function renderFaq() {
+    function renderFaq(data) {
+      lastFaqData = data; // Guarda los datos actuales para búsquedas y acciones
       const faqList = document.getElementById('faq-list');
-      const data = getFaqData();
       const currentUser = getCurrentUser();
       let filteredData = data;
 
@@ -464,7 +504,7 @@
         div.className = 'faq-item';
         let deleteQuestionBtn = '';
         if (currentUser && item.email === currentUser) {
-          deleteQuestionBtn = `<button class="delete-btn" data-type="question" data-idx="${idxGlobal}" title="Eliminar pregunta">&#128465;</button>`;
+          deleteQuestionBtn = `<button class="delete-btn" data-type="question" data-id="${item.id}" title="Eliminar pregunta">&#128465;</button>`;
         }
         div.innerHTML = `
           <div class="faq-question-text">
@@ -473,10 +513,10 @@
           </div>
           <div class="faq-question-meta">Preguntado por <b>${item.email ? getNameFromEmail(item.email) : 'Anónimo'}</b></div>
           <div class="faq-answers">
-            ${item.answers.map((a, aidx) => {
+            ${(item.answers || []).map((a, aidx) => {
               let deleteAnswerBtn = '';
               if (currentUser && a.email === currentUser) {
-                deleteAnswerBtn = `<button class="delete-btn" data-type="answer" data-idx="${idxGlobal}" data-aidx="${aidx}" title="Eliminar respuesta">&#128465;</button>`;
+                deleteAnswerBtn = `<button class="delete-btn" data-type="answer" data-id="${item.id}" data-aidx="${aidx}" title="Eliminar respuesta">&#128465;</button>`;
               }
               return `
                 <div class="faq-answer">
@@ -489,7 +529,7 @@
               `;
             }).join('')}
           </div>
-          <form class="faq-answer-form" data-idx="${idxGlobal}">
+          <form class="faq-answer-form" data-id="${item.id}">
             <input type="text" maxlength="300" placeholder="Responder..." required ${!currentUser ? "disabled" : ""}>
             <button type="submit" ${!currentUser ? "disabled" : ""}>Responder</button>
           </form>
@@ -502,20 +542,15 @@
         btn.onclick = function(e) {
           e.preventDefault();
           const type = this.getAttribute('data-type');
-          const idx = parseInt(this.getAttribute('data-idx'));
-          const data = getFaqData();
+          const id = this.getAttribute('data-id');
           if (type === "question") {
             if (confirm("¿Seguro que deseas eliminar esta pregunta y todas sus respuestas?")) {
-              data.splice(idx, 1);
-              setFaqData(data);
-              renderFaq();
+              deleteFaqQuestion(id);
             }
           } else if (type === "answer") {
             const aidx = parseInt(this.getAttribute('data-aidx'));
             if (confirm("¿Seguro que deseas eliminar esta respuesta?")) {
-              data[idx].answers.splice(aidx, 1);
-              setFaqData(data);
-              renderFaq();
+              deleteFaqAnswer(id, aidx);
             }
           }
         };
@@ -525,7 +560,7 @@
       document.querySelectorAll('.faq-answer-form').forEach(form => {
         form.onsubmit = function(e) {
           e.preventDefault();
-          const idx = this.getAttribute('data-idx');
+          const id = this.getAttribute('data-id');
           const respuesta = this.querySelector('input[type="text"]').value.trim();
           const currentUser = getCurrentUser();
           let email = currentUser || '';
@@ -533,11 +568,10 @@
             alert("Por favor, ingresa una respuesta.");
             return;
           }
-          if (!email) return; // No debería pasar por el disabled, pero por seguridad
-          const data = getFaqData();
-          data[idx].answers.push({ text: respuesta, email: email });
-          setFaqData(data);
-          renderFaq();
+          if (!email) return;
+          addFaqAnswer(id, respuesta, email, function() {
+            form.querySelector('input[type="text"]').value = '';
+          });
         };
       });
 
@@ -556,12 +590,10 @@
         alert("Por favor, ingresa una pregunta.");
         return;
       }
-      if (!email) return; // Seguridad extra, aunque el botón está deshabilitado
-      const data = getFaqData();
-      data.unshift({ question: pregunta, email: email, answers: [] });
-      setFaqData(data);
-      document.getElementById('faq-question').value = '';
-      renderFaq();
+      if (!email) return;
+      addFaqQuestion(pregunta, email, function() {
+        document.getElementById('faq-question').value = '';
+      });
     };
 
     // Resalta todas las coincidencias y hace scroll a la primera visible
@@ -572,19 +604,16 @@
       let firstMatch = null;
 
       items.forEach(item => {
-        // Quitar resaltado previo
         item.querySelectorAll('.highlight-search').forEach(span => {
           span.outerHTML = span.innerText;
         });
 
-        // Resaltar en pregunta
         const question = item.querySelector('.faq-question-text span');
         if (question && question.innerText.toLowerCase().includes(term.toLowerCase())) {
           highlightText(question, term);
           if (!firstMatch) firstMatch = question;
         }
 
-        // Resaltar en respuestas
         const answers = item.querySelectorAll('.faq-answer');
         answers.forEach(answer => {
           if (answer.innerText.toLowerCase().includes(term.toLowerCase())) {
@@ -594,9 +623,7 @@
         });
       });
 
-      // Hacer scroll a la primera coincidencia resaltada
       if (firstMatch) {
-        // Buscar el contenedor .faq-item más cercano para centrar mejor
         let parentItem = firstMatch.closest('.faq-item');
         if (parentItem) {
           parentItem.scrollIntoView({ behavior: "smooth", block: "center" });
@@ -606,29 +633,27 @@
       }
     }
 
-    // Mantén la función highlightText igual
     function highlightText(element, term) {
       const regex = new RegExp(`(${term})`, 'gi');
       element.innerHTML = element.innerText.replace(regex, '<span class="highlight-search">$1</span>');
     }
 
-    // Cambia los eventos de búsqueda para usar highlightAndScrollToMatches
     document.getElementById('faq-search-btn').onclick = function() {
       searchTerm = document.getElementById('faq-search').value;
-      renderFaq();
+      renderFaq(lastFaqData);
       setTimeout(() => highlightAndScrollToMatches(searchTerm), 100);
     };
     document.getElementById('faq-search').addEventListener('keyup', function(e) {
       if (e.key === "Enter") {
         searchTerm = this.value;
-        renderFaq();
+        renderFaq(lastFaqData);
         setTimeout(() => highlightAndScrollToMatches(searchTerm), 100);
       }
     });
 
     // Inicializar
     renderIdentityBox();
-    renderFaq();
+    getFaqData(renderFaq); // Escucha en tiempo real y renderiza
   </script>
 </body>
 </html>
