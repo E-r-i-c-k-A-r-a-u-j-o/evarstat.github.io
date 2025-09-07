@@ -48,9 +48,9 @@ Brindar una alternativa gratuita, completa y moderna para el análisis estadíst
 ## 🖼️ Capturas de pantalla
 
 <p align="center">
-  <img src="https://evarstat.com/img/captura1.png" width="600"/>
+  <img src="https://evarstat.com/evarstat-estadistica.png" width="600"/>
   <br><br>
-  <img src="https://evarstat.com/img/captura2.png" width="600"/>
+  <img src="https://evarstat.com/evarstat-software-estadistico.png" width="600"/>
 </p>
 
 ---
