@@ -469,6 +469,7 @@
           if (email && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
             setCurrentUser(email);
             renderIdentityBox();
+            renderFaq(lastFaqData); // <-- Agrega esta línea
           } else {
             alert("Por favor, ingresa un correo válido.");
           }
