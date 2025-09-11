@@ -7,7 +7,7 @@
   <title>Foro - EVAR Stat</title>
   <meta name="description" content="EVAR Stat es un software estadístico moderno y profesional para análisis de datos, diseñado para investigadores, docentes y estudiantes.">
   <meta name="keywords" content="EVAR Stat, software estadístico, análisis de datos, tablas, gráficos, exportar PDF, Word, SPSS, Jamovi, tesis, investigación">
-  <meta name="author" content="Erick Victor Araujo Rivasplata">
+  <meta name="author" content="Erick Araujo">
   <meta name="robots" content="index, follow">
 
   <!-- Canonical URL (ajusta según la página) -->
@@ -59,7 +59,7 @@
     "image": "https://evarstat.com/evarstat-logo.png",
     "author": {
       "@type": "Person",
-      "name": "Erick Victor Araujo Rivasplata"
+      "name": "ERICK VICTOR ARAUJO RIVASPLATA"
     },
     "license": "https://evarstat.com/licencia.html"
   }
@@ -109,7 +109,9 @@
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
 
   <style>
-    body { background: #f5f7fa; }
+    body {
+  background: linear-gradient(120deg, #e3f2fd 0%, #f5f7fa 100%);
+}
     .faq-section {
       max-width: 800px;
       margin: 48px auto 32px auto;
@@ -233,21 +235,23 @@
     }
     .faq-list { margin-top: 10px; }
     .faq-item {
-      background: #f7f7f7;
-      border-radius: 6px;
-      margin-bottom: 18px;
-      padding: 16px;
-      box-shadow: 0 1px 4px rgba(25, 118, 210, 0.06);
+      background: #fff;
+      border-radius: 10px;
+      margin-bottom: 22px;
+      padding: 20px 18px 14px 18px;
+      box-shadow: 0 2px 12px #1976d220;
+      border-left: 5px solid #1976d2;
+      transition: box-shadow 0.2s;
     }
+    .faq-item:hover { box-shadow: 0 4px 24px #1976d230; }
     .faq-question-text {
-      font-weight: bold;
-      color: #111; /* Cambiado de #1976d2 a negro */
-      margin-bottom: 4px;
-      font-size: 1.1rem;
+      font-weight: 700;
+      font-size: 1.15rem;
+      color: #1976d2;
+      margin-bottom: 6px;
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      word-break: break-word;
+      gap: 8px;
     }
     .faq-question-meta {
       color: #888;
@@ -257,13 +261,13 @@
     .faq-answers { margin-top: 10px; }
     .faq-answer {
       background: #e3f2fd;
-      border-radius: 4px;
-      padding: 8px;
-      margin-bottom: 6px;
+      border-radius: 6px;
+      padding: 10px 12px;
+      margin-bottom: 8px;
       color: #222;
       font-size: 1rem;
       position: relative;
-      word-break: break-word;
+      border-left: 3px solid #1976d2;
     }
     .faq-answer-meta {
       color: #888;
@@ -272,6 +276,10 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+    }
+    .faq-answer-meta::before {
+      content: "💬";
+      margin-right: 4px;
     }
     .faq-answer-form {
       display: flex;
@@ -356,9 +364,60 @@
       border-radius: 3px;
       padding: 0 2px;
     }
+
+    /* Agrega esto al final del <style> */
+    .fab-question {
+      position: fixed;
+      bottom: 32px;
+      right: 32px;
+      background: #1976d2;
+      color: #fff;
+      border-radius: 50%;
+      width: 56px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.2rem;
+      box-shadow: 0 4px 16px #1976d250;
+      cursor: pointer;
+      z-index: 100;
+      border: none;
+      transition: background 0.2s;
+    }
+    .fab-question:hover { background: #0d47a1; }
+    @media (max-width:600px) {
+      .fab-question { bottom: 16px; right: 16px; }
+    }
+
+    .badge-user {
+      background: #1976d2;
+      color: #fff;
+      border-radius: 12px;
+      padding: 2px 10px;
+      font-size: 0.98rem;
+      font-weight: 500;
+      margin-left: 6px;
+      display: inline-block;
+    }
+
+    .faq-item, .faq-answer {
+      animation: fadeInUp 0.5s;
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px);}
+      to { opacity: 1; transform: translateY(0);}
+    }
   </style>
 </head>
 <body>
+  <!-- Agrega esto justo después de <body> -->
+<div style="display:flex;align-items:center;justify-content:center;gap:18px;margin-top:24px;">
+  <img src="evarstat-logo.png" alt="EVAR Stat" style="width:54px;height:54px;border-radius:12px;box-shadow:0 2px 8px #1976d220;">
+  <div>
+    <h1 class="faq-title" style="margin-bottom:0;">Foro de la Comunidad EVAR Stat</h1>
+  </div>
+</div>
   <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-database-compat.js"></script>
   <script>
@@ -415,12 +474,14 @@
     </div>
   </div>
   <div class="faq-section">
-    <h1 class="faq-title">Preguntas de la Comunidad</h1>
     <div id="identity-box" class="identity-box"></div>
     <form id="faq-form" class="faq-form" autocomplete="off">
       <input type="text" id="faq-question" maxlength="300" placeholder="Escribe tu pregunta..." required>
       <button type="submit">Publicar</button>
     </form>
+    <div id="faq-loading" style="text-align:center;color:#1976d2;font-size:1.2rem;display:none;">
+      <span style="font-size:2rem;">⏳</span> Cargando preguntas...
+    </div>
     <div id="faq-list" class="faq-list"></div>
   </div>
   <script>
@@ -446,7 +507,7 @@
       const currentUser = getCurrentUser();
       if (currentUser) {
         box.innerHTML = `
-          <div class="identity-info">Identidad: <b>${getNameFromEmail(currentUser)}</b></div>
+          <div class="identity-info">Usuario: <b>${getNameFromEmail(currentUser)}</b></div>
           <div class="small">Tu correo se usa para identificar tus preguntas y respuestas.</div>
           <button id="change-identity-btn">Cambiar identidad</button>
         `;
@@ -509,6 +570,7 @@
         }
         div.innerHTML = `
           <div class="faq-question-text">
+            <img src="https://ui-avatars.com/api/?name=${getNameFromEmail(item.email)}&background=1976d2&color=fff&rounded=true&size=32" alt="avatar" style="vertical-align:middle;margin-right:6px;">
             <span>${item.question}</span>
             ${deleteQuestionBtn}
           </div>
@@ -654,8 +716,14 @@
 
     // Inicializar
     renderIdentityBox();
-    getFaqData(renderFaq); // Escucha en tiempo real y renderiza
+    // Muestra el loader antes de cargar datos
+    document.getElementById('faq-loading').style.display = 'block';
+    getFaqData(function(data) {
+      document.getElementById('faq-loading').style.display = 'none';
+      renderFaq(data);
+    });
   </script>
+  <!-- Agrega esto antes de </body> -->
+<button class="fab-question" title="Nueva pregunta" onclick="document.getElementById('faq-question').focus();">+</button>
 </body>
 </html>
-
