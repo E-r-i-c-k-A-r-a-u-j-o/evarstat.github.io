@@ -260,14 +260,13 @@
     }
     .faq-answers { margin-top: 10px; }
     .faq-answer {
-      background: #e3f2fd;
-      border-radius: 6px;
+      background: transparent !important;
+      border-left: 3px solid #1976d2;
+      color: #111;
       padding: 10px 12px;
       margin-bottom: 8px;
-      color: #000000;
-      font-size: 1rem;
+      border-radius: 6px;
       position: relative;
-      border-left: 3px solid #1976d2;
     }
     .faq-answer-meta {
       color: #888;
@@ -275,11 +274,8 @@
       margin-bottom: 2px;
       display: flex;
       align-items: center;
-      justify-content: space-between;
-    }
-    .faq-answer-meta::before {
-      content: "💬";
-      margin-right: 4px;
+      justify-content: flex-start;
+      gap: 8px;
     }
     .faq-answer-form {
       display: flex;
@@ -584,10 +580,8 @@
               return `
                 <div class="faq-answer">
                   <div class="faq-answer-meta">
-                    <span>
                       <img src="https://ui-avatars.com/api/?name=${getNameFromEmail(a.email)}&background=random&color=fff&rounded=true&size=24" alt="avatar" style="vertical-align:middle;margin-right:4px;">
                       Respondido por <b>${a.email ? getNameFromEmail(a.email) : 'Anónimo'}</b>
-                    </span>
                     ${deleteAnswerBtn}
                   </div>
                   ${a.text}
