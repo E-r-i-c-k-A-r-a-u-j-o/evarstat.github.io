@@ -584,7 +584,10 @@
               return `
                 <div class="faq-answer">
                   <div class="faq-answer-meta">
-                    <span>Respondido por <b>${a.email ? getNameFromEmail(a.email) : 'Anónimo'}</b></span>
+                    <span>
+                      <img src="https://ui-avatars.com/api/?name=${getNameFromEmail(a.email)}&background=random&color=fff&rounded=true&size=24" alt="avatar" style="vertical-align:middle;margin-right:4px;">
+                      Respondido por <b>${a.email ? getNameFromEmail(a.email) : 'Anónimo'}</b>
+                    </span>
                     ${deleteAnswerBtn}
                   </div>
                   ${a.text}
