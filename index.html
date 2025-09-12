@@ -310,11 +310,16 @@
     <h2 data-aos="fade-right" style="font-size:2.2rem; color:#1976d2; font-weight:800; margin-bottom:1.2rem; text-align:center;">
       Novedades
     </h2>
-      <div class="novedad-card" data-aos="zoom-in" data-aos-delay="200">
+
+    <!-- Contenedor en fila -->
+    <div class="novedades-cards" style="display:flex; gap:20px; justify-content:center; flex-wrap:wrap;">
+      
+      <!-- Card 1 -->
+      <div class="novedad-card" data-aos="zoom-in" data-aos-delay="200" style="flex:1; min-width:320px;">
         <div>
           <div class="novedad-titulo">¡Nos actualizamos EVAR Stat 3!</div>
           <div class="novedad-desc">
-            <ul style="margin:8px 0; padding-left:20px;text-align:left;">
+            <ul style="margin:8px 0; padding-left:20px; text-align:left;">
               <li>Se corrigieron y mejoraron las funcionalidades.</li>
               <li>Importa cientos de miles de datos sin problemas.</li>
               <li>Se añadieron nuevas funcionalidades.</li>
@@ -323,16 +328,22 @@
           </div>
         </div>
       </div>
-      <div class="novedades-cards">
-      <div class="novedad-card" data-aos="zoom-in" data-aos-delay="100" style="display: flex; align-items: center;">
+
+      <!-- Card 2 -->
+      <div class="novedad-card" data-aos="zoom-in" data-aos-delay="100" style="flex:1; min-width:320px; display:flex; align-items:center;">
         <img src="robot-hello.gif" alt="Robot animado" class="emoji" style="height: 5.5em; margin-right: 28px;">
         <div>
           <div class="novedad-titulo">¡EVAR Stat con IA!</div>
-          <div class="novedad-desc">Pronto EVAR Stat con inteligencia artificial integrada, lo que facilitará significativamente la interpretación y comprensión de tus resultados.</div>
+          <div class="novedad-desc">
+            Pronto EVAR Stat con inteligencia artificial integrada, lo que facilitará significativamente la interpretación y comprensión de tus resultados.
+          </div>
         </div>
       </div>
+
     </div>
+  </div>
 </section>
+
 
 
   <!-- Pie de página -->
@@ -460,6 +471,7 @@
   z-index: 2;
 }
 </style>
+
 
 
 
