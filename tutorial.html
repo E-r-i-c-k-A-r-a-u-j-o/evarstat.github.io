@@ -33,15 +33,14 @@
     }
     .tutorial-cards {
       display: flex;
+      flex-direction: column;
       gap: 32px;
-      flex-wrap: wrap;
-      justify-content: center;
       margin-bottom: 2.5rem;
+      align-items: center;
     }
     .tutorial-card {
-      flex: 1;
-      min-width: 320px;
-      max-width: 480px;
+      width: 100%;
+      max-width: 700px;
       background: #fff;
       border-radius: 18px;
       box-shadow: 0 4px 24px rgba(25,118,210,0.10);
@@ -50,13 +49,11 @@
       flex-direction: column;
       align-items: center;
       transition: transform 0.22s, box-shadow 0.22s;
-      border-left: 6px solid #1976d2;
       position: relative;
     }
     .tutorial-card:hover {
       transform: translateY(-8px) scale(1.04);
       box-shadow: 0 12px 32px rgba(25, 118, 210, 0.16);
-      border-left: 6px solid #ffd600;
     }
     .tutorial-card h3 {
       font-size: 1.18rem;
@@ -72,9 +69,15 @@
       text-align: center;
     }
     .tutorial-card iframe {
+      width: 100%;
+      max-width: 640px;
+      height: 360px;
       border-radius: 12px;
       box-shadow: 0 2px 12px rgba(25,118,210,0.08);
       margin-bottom: 0.5rem;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
     }
     .tutorial-links {
       text-align: center;
@@ -100,7 +103,7 @@
     @media (max-width: 700px) {
       .tutorial-header h1 { font-size: 1.7rem; }
       .tutorial-cards { gap: 18px; }
-      .tutorial-card { min-width: 98vw; max-width: 98vw; }
+      .tutorial-card { max-width: 98vw; }
     }
     /* Agrega esto a tu estilos.css para limitar el ancho y ajustar el texto de los comentarios */
     .tutorial-comments #comentarios div {
@@ -171,17 +174,17 @@
     <div class="tutorial-cards">
       <div class="tutorial-card" data-aos="zoom-in" data-aos-delay="100">
         <h3>Introducción a EVAR Stat</h3>
-        <iframe width="100%" height="240" src="https://youtu.be/BLXQhbhXKs4?si=2mkUFzcWpQZfH9Vy" title="Introducción a EVAR Stat" frameborder="0" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/BLXQhbhXKs4?si=ye65TDFiKpwl3cJi" title="Introducción a EVAR Stat" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         <p>Explorando la interfaz y primeros pasos para comenzar a trabajar con el software.</p>
       </div>
       <div class="tutorial-card" data-aos="zoom-in" data-aos-delay="200">
         <h3>Importar y editar datos</h3>
-        <iframe width="100%" height="240" src="https://www.youtube.com/embed/VIDEO_ID_2" title="Importar y editar datos en EVAR Stat" frameborder="0" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/BWENIIS4DCs?si=P3Vf7e5H7gayrMVC" title="Importar y editar datos en EVAR Stat" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         <p>Aprende a cargar tus datos, editarlos y prepararlos para el análisis estadístico.</p>
       </div>
       <div class="tutorial-card" data-aos="zoom-in" data-aos-delay="300">
         <h3>Menú descriptivo</h3>
-        <iframe width="100%" height="240" src="https://www.youtube.com/embed/VIDEO_ID_3" title="Medidas estadísticas y tablas en EVAR Stat" frameborder="0" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/dFgZtRWpKco?si=SfvSXav-lbCnoGfH" title="Menú descriptivo en EVAR Stat" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         <p>Utiliza las medidas estadísticas, tablas de frecuencia, tablas bivariadas y probabilidades.</p>
       </div>
     </div>
