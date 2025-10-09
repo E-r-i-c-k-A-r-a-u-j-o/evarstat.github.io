@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EVAR Stat - Tutoriales en video</title>
+  <meta name="description" content="Videos tutoriales para aprender a usar EVAR Stat, el software de estadística moderno y profesional.">
+  <link rel="stylesheet" href="estilos.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <style>
+    .tutorial-header {
+      text-align: center;
+      margin-top: 2.5rem;
+      margin-bottom: 2.2rem;
+    }
+    .tutorial-header h1 {
+      font-size: 2.6rem;
+      font-weight: 800;
+      color: #1976d2;
+      margin-bottom: 0.7rem;
+      letter-spacing: -1px;
+    }
+    .tutorial-header p {
+      font-size: 1.15rem;
+      color: #333;
+      margin-bottom: 0.5rem;
+    }
+    .tutorial-cards {
+      display: flex;
+      gap: 32px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 2.5rem;
+    }
+    .tutorial-card {
+      flex: 1;
+      min-width: 320px;
+      max-width: 480px;
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 4px 24px rgba(25,118,210,0.10);
+      padding: 1.7rem 1.2rem 1.2rem 1.2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: transform 0.22s, box-shadow 0.22s;
+      border-left: 6px solid #1976d2;
+      position: relative;
+    }
+    .tutorial-card:hover {
+      transform: translateY(-8px) scale(1.04);
+      box-shadow: 0 12px 32px rgba(25, 118, 210, 0.16);
+      border-left: 6px solid #ffd600;
+    }
+    .tutorial-card h3 {
+      font-size: 1.18rem;
+      color: #1976d2;
+      margin-bottom: 0.7rem;
+      font-weight: 700;
+      text-align: center;
+    }
+    .tutorial-card p {
+      font-size: 1.01rem;
+      color: #444;
+      margin-top: 0.7rem;
+      text-align: center;
+    }
+    .tutorial-card iframe {
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(25,118,210,0.08);
+      margin-bottom: 0.5rem;
+    }
+    .tutorial-links {
+      text-align: center;
+      margin-top: 2rem;
+    }
+    .tutorial-links a {
+      background: #1976d2;
+      color: #fff;
+      border: none;
+      padding: 0.8rem 2.2rem;
+      border-radius: 30px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      text-decoration: none;
+      box-shadow: 0 2px 8px rgba(25,118,210,0.10);
+      transition: background 0.2s, color 0.2s;
+      display: inline-block;
+    }
+    .tutorial-links a:hover {
+      background: #0d47a1;
+      color: #fff;
+    }
+    @media (max-width: 700px) {
+      .tutorial-header h1 { font-size: 1.7rem; }
+      .tutorial-cards { gap: 18px; }
+      .tutorial-card { min-width: 98vw; max-width: 98vw; }
+    }
+    /* Agrega esto a tu estilos.css para limitar el ancho y ajustar el texto de los comentarios */
+    .tutorial-comments #comentarios div {
+      word-break: break-word;
+      max-width: 100%;
+      overflow-wrap: anywhere;
+    }
+  </style>
+  <!-- Agrega esto en el <head> o antes de tu script -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-database-compat.js"></script>
+</head>
+<body>
+  <header class="navbar">
+    <div class="container nav-container">
+      <img src="evarstat-logo.png" alt="EVAR Stat Logo" class="logo" />
+      <nav class="menu" id="menu">
+        <a href="index.html#inicio">Inicio</a>
+        <a href="index.html#caracteristicas">Características</a>
+        <a href="index.html#descargas">Descargas</a>
+        <a href="instalacion-segura.html">Instalación segura</a>
+        <a href="tutorial.html">Tutorial</a>
+        <a href="index.html#contacto">Contacto</a>
+      </nav>
+      <button class="menu-toggle" id="menu-toggle">&#9776;</button>
+    </div>
+  </header>
+  <main class="container" style="padding-top:2.5rem; padding-bottom:2.5rem;">
+    <div class="tutorial-header" data-aos="fade-up">
+      <h1>Tutoriales en video de EVAR Stat</h1>
+      <p>
+        Aprende a usar EVAR Stat paso a paso con nuestros videos. Descubre cómo instalar el software, importar datos, realizar análisis estadísticos y exportar los resultados.
+      </p>
+    </div>
+    <div class="tutorial-cards">
+      <div class="tutorial-card" data-aos="zoom-in" data-aos-delay="100">
+        <h3>Introducción a EVAR Stat</h3>
+        <iframe width="100%" height="240" src="https://www.youtube.com/embed/VIDEO_ID_1" title="Introducción a EVAR Stat" frameborder="0" allowfullscreen></iframe>
+        <p>Explorando la interfaz y primeros pasos para comenzar a trabajar con el software.</p>
+      </div>
+      <div class="tutorial-card" data-aos="zoom-in" data-aos-delay="200">
+        <h3>Importar y editar datos</h3>
+        <iframe width="100%" height="240" src="https://www.youtube.com/embed/VIDEO_ID_2" title="Importar y editar datos en EVAR Stat" frameborder="0" allowfullscreen></iframe>
+        <p>Aprende a cargar tus datos, editarlos y prepararlos para el análisis estadístico.</p>
+      </div>
+      <div class="tutorial-card" data-aos="zoom-in" data-aos-delay="300">
+        <h3>Menú descriptivo</h3>
+        <iframe width="100%" height="240" src="https://www.youtube.com/embed/VIDEO_ID_3" title="Medidas estadísticas y tablas en EVAR Stat" frameborder="0" allowfullscreen></iframe>
+        <p>Utiliza las medidas estadísticas, tablas de frecuencia, tablas bivariadas y probabilidades.</p>
+      </div>
+    </div>
+    <div class="tutorial-links">
+      <a href="https://www.youtube.com/channel/UCqWD4tFhFnOKgzEd8hzk3Gw" target="_blank">
+        Ver más tutoriales en YouTube
+      </a>
+    </div>
+    <!-- Añade esto debajo del botón de YouTube -->
+    <div class="tutorial-comments" style="max-width:700px; margin:2.5rem auto 0 auto; background:#fff; border-radius:16px; box-shadow:0 2px 12px rgba(25,118,210,0.08); padding:1.5rem;">
+      <h2 style="color:#1976d2; font-size:1.3rem; margin-bottom:1rem; text-align:center;">¡Déjanos tu comentario!</h2>
+      <form id="commentForm" style="display:flex; flex-direction:column; gap:1rem;">
+        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" style="padding:0.7rem; border-radius:8px; border:1px solid #ccc;">
+        <textarea id="comentario" name="comentario" rows="3" placeholder="Escribe tu opinión, pregunta o sugerencia..." style="padding:0.7rem; border-radius:8px; border:1px solid #ccc;"></textarea>
+        <button type="submit" style="background:#1976d2; color:#fff; border:none; border-radius:8px; padding:0.7rem 1.5rem; font-size:1rem; font-weight:600; cursor:pointer;">Enviar comentario</button>
+      </form>
+      <div id="comentarios" style="margin-top:2rem;">
+        <!-- Aquí se mostrarán los comentarios y respuestas -->
+      </div>
+    </div>
+  </main>
+  <script>
+    // Menú responsive
+    const menuToggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('menu');
+    menuToggle.addEventListener('click', () => {
+      menu.classList.toggle('show');
+    });
+    // Efecto sticky animado en la navbar
+    window.addEventListener('scroll', function() {
+      const navbar = document.querySelector('.navbar');
+      if (window.scrollY > 20) {
+        navbar.classList.add('sticky-anim');
+      } else {
+        navbar.classList.remove('sticky-anim');
+      }
+    });
+  </script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      once: true
+    });
+  </script>
+  <script>
+    // Configuración del proyecto
+    const firebaseConfig = {
+      apiKey: "AIzaSyD91BEba43lxr-kEqgibgRLyV9v-HiRaP4",
+      authDomain: "evar-stat.firebaseapp.com",
+      databaseURL: "https://evar-stat-default-rtdb.firebaseio.com", 
+      projectId: "evar-stat",
+      storageBucket: "evar-stat.firebasestorage.app",
+      messagingSenderId: "697146517077",
+      appId: "1:697146517077:web:55dfce33c4fde85b4b56dc",
+      measurementId: "G-10JMJ80QFT"
+    };
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.database();
+
+    const form = document.getElementById('commentForm');
+    const comentariosDiv = document.getElementById('comentarios');
+
+    // Enviar comentario principal
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const nombre = document.getElementById('nombre').value.trim();
+      const comentario = document.getElementById('comentario').value.trim();
+      if (nombre && comentario) {
+        db.ref('comentarios').push({
+          nombre,
+          comentario,
+          fecha: Date.now(),
+          respuestas: []
+        });
+        form.reset();
+      }
+    });
+
+    // Enviar respuesta a un comentario
+    function enviarRespuesta(key) {
+      const nombre = prompt("Tu nombre:");
+      const respuesta = prompt("Escribe tu respuesta:");
+      if (nombre && respuesta) {
+        db.ref(`comentarios/${key}/respuestas`).once('value', snap => {
+          const respuestas = snap.val() || [];
+          respuestas.push({
+            nombre,
+            respuesta,
+            fecha: Date.now()
+          });
+          db.ref(`comentarios/${key}/respuestas`).set(respuestas);
+        });
+      }
+    }
+
+    // Mostrar comentarios y respuestas en tiempo real
+    db.ref('comentarios').on('value', snapshot => {
+      const datos = snapshot.val();
+      let html = '';
+      if (datos) {
+        // Mostrar los más recientes arriba
+        const arr = Object.entries(datos).sort((a, b) => b[1].fecha - a[1].fecha);
+        arr.forEach(([key, c]) => {
+          html += `<div style="border-bottom:1px solid #eee; padding:0.7rem 0;">
+            <strong style="color:#1976d2;">${c.nombre}</strong><br>
+            <span style="color:#333;">${c.comentario}</span>
+            <div style="margin-top:0.5rem;">
+              <button onclick="enviarRespuesta('${key}')" style="background:#e3f2fd; color:#1976d2; border:none; border-radius:6px; padding:0.3rem 1rem; font-size:0.95rem; cursor:pointer;">Responder</button>
+            </div>
+            <div style="margin-left:1.2rem; margin-top:0.7rem;">
+              ${(c.respuestas || []).map(r => `
+                <div style="border-left:2px solid #1976d2; padding-left:0.7rem; margin-bottom:0.5rem;">
+                  <strong style="color:#1976d2;">${r.nombre}</strong><br>
+                  <span style="color:#333;">${r.respuesta}</span>
+                </div>
+              `).join('')}
+            </div>
+          </div>`;
+        });
+      }
+      comentariosDiv.innerHTML = html;
+    });
+
+    // Exponer la función para el botón
+    window.enviarRespuesta = enviarRespuesta;
+  </script>
+</body>
+</html>
