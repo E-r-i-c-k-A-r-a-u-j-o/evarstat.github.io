@@ -2,62 +2,62 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://evarstat.com/</loc>
-    <lastmod>2025-06-14</lastmod>
+    <lastmod>2025-10-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://evarstat.com/capturas.html</loc>
-    <lastmod>2025-06-14</lastmod>
+    <lastmod>2025-10-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://evarstat.com/descargas.html</loc>
-    <lastmod>2025-06-14</lastmod>
+    <lastmod>2025-10-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://evarstat.com/contacto.html</loc>
-    <lastmod>2025-06-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://evarstat.com/faq.html</loc>
-    <lastmod>2025-06-14</lastmod>
+    <lastmod>2025-10-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://evarstat.com/Manual_Uso.pdf</loc>
-    <lastmod>2025-06-14</lastmod>
+    <loc>https://evarstat.com/Manual-de-usuario.pdf</loc>
+    <lastmod>2025-10-08</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://evarstat.com/Documentacion_Plugin.pdf</loc>
-    <lastmod>2025-06-14</lastmod>
+    <loc>https://evarstat.com/EVAR-Stat-Software-estadistico.pdf</loc>
+    <lastmod>2025-10-08</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://evarstat.com/Crear_Subir_Plugin.pdf</loc>
-    <lastmod>2025-06-14</lastmod>
+    <lastmod>2025-10-08</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://evarstat.com/blog/evaluacion-software-estadistico-completo.html</loc>
-    <lastmod>2025-06-19</lastmod>
+    <loc>https://github.com/E-r-i-c-k-A-r-a-u-j-o/evarstat.github.io/releases/download/v3.0.0/EVAR-Stat-3.0-winx64.exe</loc>
+    <lastmod>2025-10-08</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://evarstat.com/tutorial.html</loc>
+    <lastmod>2025-10-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-  <loc>https://evarstat.com/download/EVAR-Stat-1.0.0-winx64.exe</loc>
-  <lastmod>2025-06-19</lastmod>
-  <changefreq>yearly</changefreq>
-  <priority>0.4</priority>
-</url>
+    <loc>https://evarstat.com/instalacion-segura.html</loc>
+    <lastmod>2025-10-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
