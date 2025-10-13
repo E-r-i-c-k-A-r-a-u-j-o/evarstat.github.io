@@ -50,64 +50,92 @@
   </script>
 
   <!-- 📦 JSON-LD Schema.org COMPLETO -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "SoftwareApplication",
-        "name": "EVAR Stat",
-        "url": "https://evarstat.com",
-        "applicationCategory": "EducationalApplication",
-        "operatingSystem": "Windows",
-        "description": "EVAR Stat es un software estadístico moderno y profesional para análisis y procesamiento de datos, diseñado para estudiantes, docentes e investigadores.",
-        "image": "https://evarstat.com/evarstat-logo.png",
-        "author": {
-          "@type": "Person",
-          "name": "Erick Victor Araujo Rivasplata"
-        },
-        "license": "https://evarstat.com/licencia.html"
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "EVAR Stat",
+      "alternateName": "Software Estadístico EVAR Stat",
+      "applicationCategory": "EducationalApplication",
+      "operatingSystem": "Windows",
+      "softwareVersion": "2.0",
+      "url": "https://evarstat.com",
+      "downloadUrl": "https://evarstat.com/descargar.html",
+      "screenshot": "https://evarstat.com/evarstat-logo.png",
+      "image": "https://evarstat.com/evarstat-logo.png",
+      "description": "EVAR Stat es un software estadístico moderno y profesional para análisis, visualización y procesamiento de datos, diseñado para estudiantes, docentes e investigadores.",
+      "author": {
+        "@type": "Person",
+        "name": "Erick Victor Araujo Rivasplata",
+        "url": "https://evarstat.com"
       },
-      {
-        "@type": "WebSite",
-        "name": "EVAR Stat",
-        "alternateName": "EVAR Stat, Software de estadística",
-        "url": "https://evarstat.com/",
-        "potentialAction": {
-          "@type": "SearchAction",
-          "target": "https://evarstat.com/?q={search_term_string}",
-          "query-input": "required name=search_term_string"
-        }
-      },
-      {
+      "publisher": {
         "@type": "Organization",
         "name": "EVAR Stat",
-        "alternateName": "Software Estadístico EVAR Stat",
-        "url": "https://evarstat.com",
-        "logo": "https://evarstat.com/evarstat-logo.png",
-        "sameAs": [
-          "https://github.com/E-r-i-c-k-A-r-a-u-j-o/evarstat.github.io",
-          "https://www.youtube.com/@EVARStat",
-          "https://twitter.com/EVARStat",
-          "https://www.linkedin.com/in/earaujor/"
-        ],
-        "description": "EVAR Stat es un software estadístico moderno y profesional para análisis y procesamiento de datos.",
-        "founder": {
-          "@type": "Person",
-          "name": "Erick Victor Araujo Rivasplata"
-        },
-        "email": "contacto@evarstat.com"
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://evarstat.com/evarstat-logo.png"
+        }
       },
-      {
-        "@type": "WebPage",
-        "name": "Tutoriales",
-        "url": "https://evarstat.com/tutorial.html",
-        "description": "Videos tutoriales para aprender a usar EVAR Stat, el software de estadística moderno y profesional.",
-        "inLanguage": "es"
+      "offers": {
+        "@type": "Offer",
+        "price": "0.00",
+        "priceCurrency": "USD",
+        "category": "Free",
+        "availability": "https://schema.org/InStock"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "ratingCount": "125",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "license": "https://evarstat.com/licencia.html",
+      "inLanguage": "es"
+    },
+    {
+      "@type": "WebSite",
+      "name": "EVAR Stat",
+      "alternateName": "EVAR Stat, Software de Estadística",
+      "url": "https://evarstat.com/",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://evarstat.com/?q={search_term_string}",
+        "query-input": "required name=search_term_string"
       }
-    ]
-  }
-  </script>
+    },
+    {
+      "@type": "Organization",
+      "name": "EVAR Stat",
+      "alternateName": "Software Estadístico EVAR Stat",
+      "url": "https://evarstat.com",
+      "logo": "https://evarstat.com/evarstat-logo.png",
+      "sameAs": [
+        "https://github.com/E-r-i-c-k-A-r-a-u-j-o/evarstat.github.io",
+        "https://www.youtube.com/@EVARStat",
+        "https://twitter.com/EVARStat",
+        "https://www.linkedin.com/in/earaujor/"
+      ],
+      "description": "EVAR Stat es un software estadístico moderno y profesional para análisis, visualización y procesamiento de datos.",
+      "founder": {
+        "@type": "Person",
+        "name": "Erick Victor Araujo Rivasplata"
+      },
+      "email": "contacto@evarstat.com"
+    },
+    {
+      "@type": "WebPage",
+      "name": "Tutoriales de EVAR Stat",
+      "url": "https://evarstat.com/tutorial.html",
+      "description": "Videos tutoriales para aprender a usar EVAR Stat, el software estadístico moderno y profesional para análisis de datos.",
+      "inLanguage": "es"
+    }
+  ]
+}
+</script>
 
   <!-- 🎨 Estilos -->
   <link rel="stylesheet" href="estilos.css" />
@@ -468,6 +496,7 @@
   z-index: 2;
 }
 </style>
+
 
 
 
