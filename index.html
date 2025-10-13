@@ -50,57 +50,92 @@
   </script>
 
   <!-- 📦 JSON-LD Schema.org COMPLETO -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "SoftwareApplication",
-        "name": "EVAR Stat",
-        "url": "https://evarstat.com",
-        "applicationCategory": "EducationalApplication",
-        "operatingSystem": "Windows",
-        "description": "EVAR Stat es un software estadístico moderno y profesional para análisis y procesamiento de datos, diseñado para estudiantes, docentes e investigadores.",
-        "image": "https://evarstat.com/evarstat-logo.png",
-        "author": {
-          "@type": "Person",
-          "name": "Erick Victor Araujo Rivasplata"
-        },
-        "license": "https://evarstat.com/licencia.html"
+<!-- 🧠 Knowledge Graph - EVAR Stat + Erick Victor Araujo Rivasplata -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://evarstat.com/#erickaraujo",
+      "name": "Erick Victor Araujo Rivasplata",
+      "url": "https://evarstat.com",
+      "image": "https://evarstat.com/evarstat-logo.png",
+      "jobTitle": "Estadístico y Analista de Datos",
+      "worksFor": {
+        "@id": "https://evarstat.com/#organization"
       },
-      {
-        "@type": "WebSite",
-        "name": "EVAR Stat",
-        "alternateName": "EVAR Stat, Software de estadística",
-        "url": "https://evarstat.com/",
-        "potentialAction": {
-          "@type": "SearchAction",
-          "target": "https://evarstat.com/?q={search_term_string}",
-          "query-input": "required name=search_term_string"
-        }
+      "sameAs": [
+        "https://www.linkedin.com/in/earaujor/",
+        "https://twitter.com/EVARStat",
+        "https://www.youtube.com/@EVARStat",
+        "https://github.com/E-r-i-c-k-A-r-a-u-j-o/evarstat.github.io"
+      ],
+      "knowsAbout": [
+        "estadística",
+        "análisis de datos",
+        "visualización de datos",
+        "Power BI",
+        "Machine Learning",
+        "SPSS",
+        "Jamovi"
+      ],
+      "description": "Erick Victor Araujo Rivasplata es un estadístico y analista de datos especializado en analítica de negocios, inteligencia comercial y modelos predictivos. Creador del software estadístico EVAR Stat."
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://evarstat.com/#organization",
+      "name": "EVAR Stat",
+      "url": "https://evarstat.com",
+      "logo": "https://evarstat.com/evarstat-logo.png",
+      "founder": {
+        "@id": "https://evarstat.com/#erickaraujo"
       },
-      {
-        "@type": "Organization",
-        "name": "EVAR Stat",
-        "alternateName": "Software Estadístico EVAR Stat",
-        "url": "https://evarstat.com",
-        "logo": "https://evarstat.com/evarstat-logo.png",
-        "sameAs": [
-          "https://github.com/E-r-i-c-k-A-r-a-u-j-o/evarstat.github.io",
-          "https://www.youtube.com/@EVARStat",
-          "https://twitter.com/EVARStat",
-          "https://www.linkedin.com/in/earaujor/"
-        ],
-        "description": "EVAR Stat es un software estadístico moderno y profesional para análisis y procesamiento de datos.",
-        "founder": {
-          "@type": "Person",
-          "name": "Erick Victor Araujo Rivasplata"
-        },
-        "email": "contacto@evarstat.com"
+      "sameAs": [
+        "https://twitter.com/EVARStat",
+        "https://www.youtube.com/@EVARStat",
+        "https://github.com/E-r-i-c-k-A-r-a-u-j-o/evarstat.github.io",
+        "https://www.linkedin.com/in/earaujor/"
+      ],
+      "description": "EVAR Stat es un software estadístico moderno y profesional para análisis de datos, diseñado para estudiantes, docentes e investigadores. Combina la potencia de SPSS y Jamovi en una interfaz visual moderna."
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://evarstat.com/#software",
+      "name": "EVAR Stat",
+      "url": "https://evarstat.com",
+      "applicationCategory": "EducationalApplication",
+      "operatingSystem": "Windows",
+      "author": {
+        "@id": "https://evarstat.com/#erickaraujo"
+      },
+      "publisher": {
+        "@id": "https://evarstat.com/#organization"
+      },
+      "description": "Software estadístico moderno para análisis de datos con interfaz visual avanzada y funciones descriptivas, inferenciales y predictivas.",
+      "image": "https://evarstat.com/evarstat-logo.png",
+      "license": "https://evarstat.com/licencia.html",
+      "inLanguage": "es"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://evarstat.com/#website",
+      "name": "EVAR Stat",
+      "url": "https://evarstat.com",
+      "publisher": {
+        "@id": "https://evarstat.com/#organization"
+      },
+      "inLanguage": "es",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://evarstat.com/?q={search_term_string}",
+        "query-input": "required name=search_term_string"
       }
-    ]
-  }
-  </script>
+    }
+  ]
+}
+</script>
+
 
   <!-- 🎨 Estilos -->
   <link rel="stylesheet" href="estilos.css" />
@@ -461,6 +496,7 @@
   z-index: 2;
 }
 </style>
+
 
 
 
