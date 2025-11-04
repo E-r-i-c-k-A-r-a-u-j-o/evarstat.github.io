@@ -181,17 +181,17 @@
              aria-expanded="false"
              aria-controls="wu-notify-actions"
              onclick="toggleInline('wu-notify-actions', this); return false;">
-            Notificar el envío del MTCN
+            Notificar el envío
           </a>
 
           <div id="wu-notify-actions" class="inline-actions" role="group" aria-label="Opciones para notificar envío">
             <a class="btn-primary"
-               href="mailto:contacto@evarstat.com?subject=Donaci%C3%B3n%20Western%20Union%20-%20EVAR%20Stat&body=Hola%20EVAR%20Stat,%0A%0AMTCN:%20__________%0AMonto/Moneda:%20__________%0APa%C3%ADs/Ciudad%20de%20origen:%20__________%0ANombre%20remitente:%20__________"
+               href="mailto:contacto@evarstat.com?subject=Donaci%C3%B3n%20Western%20Union%20-%20EVAR%20Stat&body=Hola%20EVAR%20Stat,%20hice%20una%20donaci%C3%B3n%20por%20Western%20Union.%0A%0AMTCN:%20%0AMonto:%20%0APa%C3%ADs:%20%0ANombre%20remitente:%20"
                target="_blank" rel="noopener">
               Por correo
             </a>
             <a class="btn-primary"
-               href="https://wa.me/51931417388?text=Hola%20EVAR%20Stat,%20hice%20una%20donaci%C3%B3n%20por%20Western%20Union.%20MTCN:%20%20%20%20%20,Monto:%20%20%20%20%20,Pa%C3%ADs:%20%20%20%20%20"
+               href="https://wa.me/51931417388?text=Hola%20EVAR%20Stat,%20hice%20una%20donaci%C3%B3n%20por%20Western%20Union.%0A%0AMTCN:%0AMonto:%0APa%C3%ADs:%0ANombre%20remitente:%20"
                target="_blank" rel="noopener">
               WhatsApp
             </a>
@@ -261,7 +261,7 @@
       box.classList.toggle('show', show);
       if (trigger) {
         trigger.setAttribute('aria-expanded', show ? 'true' : 'false');
-        trigger.textContent = show ? 'Notificar el envío del MTCN' : 'Notificar el envío del MTCN';
+        trigger.textContent = show ? 'Notificar el envío' : 'Notificar el envío';
       }
     }
 
