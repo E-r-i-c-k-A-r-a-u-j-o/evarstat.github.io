@@ -4,809 +4,284 @@
   <meta charset="UTF-8" />
   <meta http-equiv="Content-Language" content="es">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Foro | EVAR Stat</title>
-  <meta name="description" content="EVAR Stat es un software estadístico moderno y profesional para análisis de datos, diseñado para investigadores, docentes y estudiantes.">
-  <meta name="keywords" content="EVAR Stat, software estadístico, análisis de datos, tablas, gráficos, exportar PDF, Word, SPSS, Jamovi, tesis, investigación">
-  <meta name="author" content="Erick Araujo">
-  <meta name="robots" content="index, follow">
+  <title>Donaciones | EVAR Stat</title>
+  <meta name="description" content="Apoya el desarrollo de EVAR Stat con una donación. Tu aporte ayuda a mantener y mejorar el software." />
+  <link rel="canonical" href="https://evarstat.com/donaciones.html" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="estilos.css" />
 
-  <!-- Canonical URL (ajusta según la página) -->
-  <link rel="canonical" href="https://evarstat.com/faq.html" />
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="EVAR Stat - Software Estadístico" />
-  <meta property="og:description" content="Software estadístico moderno para análisis de datos, ideal para estudiantes, investigadores y empresas." />
-  <meta property="og:image" content="https://evarstat.com/evarstat-estadistica.png" />
-  <meta property="og:url" content="https://evarstat.com/faq.html" />
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="EVAR Stat" />
-  <meta property="og:locale" content="es_ES" />
-
-  <!-- Twitter Cards -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="EVAR Stat - Software Estadístico" />
-  <meta name="twitter:description" content="EVAR Stat es un software estadístico profesional para análisis de datos, con resultados exportables." />
-  <meta name="twitter:image" content="https://evarstat.com/evarstat-estadistica.png" />
-
-  <!-- Sitemap y robots -->
-  <link rel="sitemap" type="application/xml" title="Sitemap" href="https://evarstat.com/sitemap.xml" />
-  <link rel="robots" href="https://evarstat.com/robots.txt" />
-
-  <!-- Favicon e iconos -->
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <link rel="apple-touch-icon" href="evarstat-logo.png">
-  <link rel="shortcut icon" href="https://evarstat.com/favicon.ico" type="image/x-icon">
-
-  <!-- Google Analytics (opcional) -->
+  <!-- Google Analytics (mismo ID que index) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-4DGWQHFF2H"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag(){ dataLayer.push(arguments); }
     gtag('js', new Date());
     gtag('config', 'G-4DGWQHFF2H');
   </script>
 
-<!-- 📘 Datos estructurados de preguntas frecuentes -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "¿Qué es EVAR Stat?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "EVAR Stat es un software estadístico moderno diseñado para análisis de datos, visualización y modelado predictivo."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿EVAR Stat es gratis?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Sí, EVAR Stat es gratuito tanto para estudiantes, docentes e investigadores."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿En qué sistemas operativos funciona EVAR Stat?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "EVAR Stat está disponible para Windows, y próximamente para macOS y Linux."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Qué diferencia a EVAR Stat de SPSS o Jamovi?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "EVAR Stat combina la potencia analítica de SPSS con la visualización moderna de Jamovi y la potencia de Power BI ofreciendo una experiencia más intuitiva y rápida."
-      }
-    }
-  ]
-}
-</script>
-
-  <!-- Estilos -->
-  <link rel="stylesheet" href="estilos.css" />
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
-
   <style>
-    body {
-      background: linear-gradient(120deg, #e3f2fd 0%, #f5f7fa 100%);
+    .donate-hero {
+      background: linear-gradient(120deg, #1976d2 0%, #42a5f5 100%);
+      color: #fff; text-align: center; padding: 3.2rem 0 2.2rem;
     }
-    .faq-section {
-      max-width: 800px;
-      margin: 48px auto 32px auto;
-      background: transparent; /* antes: #fff */
-      border-radius: 0;         /* antes: 18px */
-      box-shadow: none;         /* antes: 0 2px 16px rgba(...) */
-      padding: 0 0 2rem 0;      /* opcional: reduce relleno exterior */
+    .donate-hero p  { margin: 0; font-size: 1.05rem; opacity: .95; }
+    .donate-grid {
+      display: grid; gap: 1.2rem; grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+      margin-top: 1.2rem;
     }
-    /* NUEVO: tarjeta independiente para identidad */
-    .identity-card{
-      max-width: 800px; /* antes: 900px */
-      width: 100%;
-      margin: 28px auto 0 auto;
-      background: #fff;
-      border-radius: 22px;
-      padding: 1.6rem 1.2rem;
-      border: 1px solid rgba(25,118,210,.06);
-      box-shadow:
-        0 2px 12px rgba(25,118,210,.10),
-        0 10px 30px rgba(25,118,210,.10);
-      position: relative;
-      overflow: hidden;
+    .card {
+      background: #fff; border-radius: 14px; padding: 1.1rem 1rem;
+      box-shadow: 0 6px 22px rgba(25,118,210,.08);
     }
-    /* Halo sutil alrededor de la tarjeta */
-    .identity-card::before{
-      content:"";
-      position:absolute;
-      inset:-24px;
-      border-radius:28px;
-      background: radial-gradient(120% 60% at 50% 0%,
-                  rgba(144,202,249,.35), rgba(187,222,251,.22) 40%,
-                  rgba(255,255,255,0) 70%);
-      filter: blur(8px);
-      z-index:-1;
-      pointer-events:none;
-    }
+    .card h3 { margin:.2rem 0 .5rem; color:#1976d2; display:flex; align-items:center; gap:.45rem; justify-content:center; }
+    .brand-logo { height:auto; width:auto; }
+    .brand-lg { height:70px; }  /* tamaño único para todos los logos */
+    .brand-logo.brand-sm { height:58px; } /* logos un poco más pequeños (WU, PayPal, MP) */
 
-    .identity-box{
-      display:flex; flex-direction:column; align-items:center;
-      margin:0; background:transparent; border-radius:12px; padding:0;
-      text-align:center;
-    }
-    .identity-info{ color:#111; font-weight:700; margin-bottom:.4rem; }
-    .identity-box .small{ color:#555; font-size:.97rem; margin-bottom:.6rem; }
-
-    .identity-box input[type="email"]{
-      padding:10px 12px; border-radius:8px; border:1px solid #c5d9f1;
-      font-size:1rem; width:280px; max-width:100%; background:#f8fafc;
-      margin-bottom:.6rem;
-    }
-    .identity-box input[type="email"]:focus{
-      outline:0; border-color:#1976d2; box-shadow:0 0 0 3px rgba(25,118,210,.12);
-    }
-    .identity-box button{
-      background:#1976d2; color:#fff; border:0; border-radius:10px;
-      padding:.6rem 1.1rem; font-weight:600; cursor:pointer; transition:background .2s;
-    }
-    .identity-box button:hover{ background:#0d47a1; }
-
-    @media (max-width:600px){
-      .identity-card{ margin:18px auto 0; border-radius:18px; padding:1.1rem .9rem; }
-    }
-
-    .faq-title {
+    .btn-primary.btn-center {
+      display: block;
+      margin: .8rem auto 0;
       text-align: center;
-      font-size: 2.2rem;
-      color: #111; /* Cambiado de #1976d2 a negro */
-      margin-bottom: 2rem;
-      font-weight: 700;
+      width: clamp(130px, 30%, 230px); /* nuevo: ancho reducido y responsive */
+      border-radius: 28px;
     }
-    .identity-box input[type="email"] {
-      padding: 8px;
-      border-radius: 4px;
-      border: 1px solid #bbb;
-      font-size: 1rem;
-      margin-bottom: 10px;
-      width: 260px;
-      max-width: 100%;
+    .btn-primary img.logo-inline, .btn-outline img.logo-inline { height:18px; width:auto; vertical-align:-3px; margin-right:.45rem; }
+    .btn-primary, .btn-outline {
+      display: inline-block; text-decoration: none; font-weight: 700;
+      padding: .7rem 1.4rem; border-radius: 28px; margin-top: .6rem;
     }
-    .identity-box button {
-      background: #1976d2;
-      color: #fff;
-      border: none;
-      border-radius: 4px;
-      padding: 8px 16px;
-      font-size: 1rem;
-      cursor: pointer;
-      margin-bottom: 6px;
-      transition: background 0.2s;
-    }
-    .identity-box button:hover {
-      background: #0d47a1;
-    }
-    .identity-info {
-      color: #111; /* Cambiado de #1976d2 a negro */
-      font-weight: 600;
-      margin-bottom: 8px;
-    }
-    .identity-box .small {
-      color: #555;
-      font-size: 0.97rem;
-      margin-bottom: 8px;
-      text-align: center;
-    }
-    .faq-search-box {
+    .btn-primary { background: #1976d2; color: #fff; }
+    .btn-primary:hover { background: #0d47a1; }
+    .btn-outline { border: 2px solid #1976d2; color: #1976d2; }
+    .btn-outline:hover { background:#e3f2fd; }
+    .qr {
       display: flex;
-      justify-content: flex-end;
-      gap: 8px;
-      margin-bottom: 0 !important;
-      width: 100%;
-    }
-    .faq-search-box input[type="text"] {
-      padding: 8px;
-      border-radius: 4px;
-      border: 1px solid #ccc;
-      font-size: 1rem;
-      min-width: 100px;      /* Antes: 120px */
-      max-width: 150px;     /* Antes: 180px */
-      width: 150px;         /* Fija el ancho */
-      background: #f8fafc;
-    }
-    .faq-search-box button {
-      background: #1976d2;
-      color: #fff;
-      border: none;
-      border-radius: 4px;
-      padding: 8px 14px;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: background 0.2s;
-      min-width: 70px;
-    }
-    .faq-search-box button:hover {
-      background: #0d47a1;
-    }
-    .faq-form {
-      display: flex;
-      gap: 10px;
-      margin-bottom: 24px;
+      flex-direction: column;
+      align-items: center;
       justify-content: center;
-      flex-wrap: wrap;
+      gap: .6rem;
+      margin-top: .8rem;
+      text-align: center;
     }
-    .faq-form input[type="text"] {
-      flex: 1;
-      padding: 10px;
-      border-radius: 4px;
-      border: 1px solid #ccc;
-      font-size: 1rem;
-      min-width: 180px;
-    }
-    .faq-form button {
-      background: #1976d2;
-      color: #fff;
-      border: none;
-      border-radius: 4px;
-      padding: 10px 18px;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: background 0.2s;
-    }
-    .faq-form button[disabled] {
-      background: #b0bec5;
-      cursor: not-allowed;
-    }
-    .faq-form button:hover:enabled {
-      background: #0d47a1;
-    }
-    .faq-list { margin-top: 10px; }
-    .faq-item {
-      background: #fff;
+    .qr img {
+      width: 130px;
+      height: auto;
       border-radius: 10px;
-      margin-bottom: 22px;
-      padding: 20px 18px 14px 18px;
-      box-shadow: 0 2px 12px #1976d220;
-      border-left: 5px solid #1976d2;
-      transition: box-shadow 0.2s;
+      box-shadow: 0 2px 10px rgba(0,0,0,.08);
+      background: #fff;
     }
-    .faq-item:hover { box-shadow: 0 4px 24px #1976d230; }
-    .faq-question-text {
-      font-weight: 700;
-      font-size: 1.15rem;
-      color: #000000;
-      margin-bottom: 6px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-    .faq-question-meta {
-      color: #888;
-      font-size: 0.95rem;
-      margin-bottom: 8px;
-    }
-    .faq-answers { margin-top: 10px; }
-    .faq-answer {
-      background: transparent !important;
-      border-left: 3px solid #1976d2;
-      color: #111;
-      padding: 10px 12px;
-      margin-bottom: 8px;
-      border-radius: 6px;
-      position: relative;
-    }
-    .faq-answer-meta {
-      color: #888;
-      font-size: 0.92rem;
-      margin-bottom: 2px;
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      gap: 8px;
-    }
-    .faq-answer-form {
-      display: flex;
-      gap: 8px;
-      margin-top: 8px;
-      flex-wrap: wrap;
-    }
-    .faq-answer-form input[type="text"] {
-      flex: 1;
-      padding: 6px;
-      border-radius: 4px;
-      border: 1px solid #bbb;
-      font-size: 1rem;
-      min-width: 120px;
-    }
-    .faq-answer-form button {
-      background: #1976d2;
-      color: #fff;
-      border: none;
-      border-radius: 4px;
-      padding: 6px 14px;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: background 0.2s;
-    }
-    .faq-answer-form button[disabled] {
-      background: #b0bec5;
-      cursor: not-allowed;
-    }
-    .faq-answer-form button:hover:enabled {
-      background: #0d47a1;
-    }
-    .delete-btn {
-      background: #e53935;
-      color: #fff;
-      border: none;
-      border-radius: 4px;
-      padding: 4px 10px;
-      font-size: 0.95rem;
-      cursor: pointer;
-      margin-left: 10px;
-      transition: background 0.2s;
-    }
-    .delete-btn:hover {
-      background: #b71c1c;
-    }
-    @media (max-width: 600px) {
-      .faq-section { padding: 1.2rem 0.5rem; }
-      .faq-title { font-size: 1.3rem; }
-      .faq-form, .faq-answer-form, .faq-search-box { flex-direction: column; gap: 6px; }
-      .faq-question-text { flex-direction: column; align-items: flex-start; gap: 6px; }
-    }
-    .faq-search-fixed {
-      position: fixed;
-      top: 24px;
-      right: 32px;
-      z-index: 20;
-      max-width: 340px;
-      width: auto;
-      box-sizing: border-box;
-      margin-left: 16px;
-    }
-    @media (max-width: 900px) {
-      .faq-search-fixed {
-        position: static;
-        margin: 10px auto 0 auto;
-        display: flex;
-        justify-content: flex-end;
-        width: 95%;
-        max-width: 100%;
-      }
-      .faq-search-box {
-        width: 100%;
-        max-width: 100%;
-        padding: 8px 4px;
-      }
+    .qr img {
+      animation: fadeZoom .6s ease;
     }
 
-    .highlight-search {
-      background: #ffe082;
-      color: #222;
-      border-radius: 3px;
-      padding: 0 2px;
+    @keyframes fadeZoom {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
     }
 
-    /* Agrega esto al final del <style> */
-    .fab-question {
-      position: fixed;
-      bottom: 32px;
-      right: 32px;
-      background: #1976d2;
-      color: #fff;
-      border-radius: 50%;
-      width: 56px;
-      height: 56px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 2.2rem;
-      box-shadow: 0 4px 16px #1976d250;
-      cursor: pointer;
-      z-index: 100;
-      border: none;
-      transition: background 0.2s;
-    }
-    .fab-question:hover { background: #0d47a1; }
-    @media (max-width:600px) {
-      .fab-question { bottom: 16px; right: 16px; }
-    }
+    .qr img { width:120px; height:auto; border-radius:10px; box-shadow:0 2px 10px rgba(0,0,0,.08); background:#fff; }
+    .small { font-size: .92rem; color:#555; }
+    .center { text-align:center; }
+    .center-col { display:flex; flex-direction:column; align-items:center; } /* NUEVO */
 
-    .badge-user {
-      background: #1976d2;
-      color: #fff;
-      border-radius: 12px;
-      padding: 2px 10px;
-      font-size: 0.98rem;
-      font-weight: 500;
-      margin-left: 6px;
-      display: inline-block;
-    }
+    /* NUEVO: acciones desplegables en línea */
+    .inline-actions { display:none; margin-top:.5rem; gap:.5rem; align-items:center; flex-wrap:wrap; justify-content:center; } /* centrado */
+    .inline-actions.show { display:flex; }
+    .notify-toggle { background:none; border:0; color:#1976d2; font-weight:700; cursor:pointer; padding:0; }
+    .notify-toggle:hover { text-decoration: underline; }
 
-    .faq-item, .faq-answer {
-      animation: fadeInUp 0.5s;
+    /* Zoom del QR (solo Yape) */
+    .qr-zoom-overlay{
+      position:fixed; inset:0; display:none;
+      align-items:center; justify-content:center;
+      background:rgba(0,0,0,.85); z-index:10000; padding:1rem;
     }
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(20px);}
-      to { opacity: 1; transform: translateY(0);}
-    }
-
-    /* Tarjetas para cada hilo de preguntas */
-    #faq-list{
-      max-width: 800px;
-      margin: 18px auto 32px;
-      display: grid;
-      gap: 14px;
-    }
-    #faq-list > *{
+    .qr-zoom-overlay.show{ display:flex; }
+    .qr-zoom-img{
+      max-width:60vw; max-height:60vh;
+      border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,.5);
       background:#fff;
-      border-radius:16px;
-      padding:1rem 1.1rem;
-      box-shadow:0 2px 16px rgba(25,118,210,.08);
-      border:1px solid rgba(25,118,210,.06);
-      transition: box-shadow .2s ease;
-    }
-    #faq-list > *:hover{
-      box-shadow:0 6px 22px rgba(25,118,210,.12);
-    }
-    /* Entradas y botón de respuesta dentro de cada hilo */
-    #faq-list form{ display:flex; gap:.6rem; margin-top:.6rem; }
-    #faq-list input[type="text"]{
-      flex:1 1 auto;
-      border:1.5px solid #c5d9f1;
-      border-radius:10px;
-      padding:.6rem .8rem;
-      outline:0;
-    }
-    #faq-list input[type="text"]:focus{
-      border-color:#1976d2;
-      box-shadow:0 0 0 3px rgba(25,118,210,.12);
-    }
-    #faq-list button{
-      background:#1976d2; color:#fff; border:0;
-      border-radius:10px; padding:.55rem 1rem; font-weight:600; cursor:pointer;
-    }
-    #faq-list button:hover{ background:#0d47a1; }
-
-    /* Responder sin negrita (igual a Publicar) */
-    #faq-list .faq-answer-form button{
-      font-weight:400;
     }
   </style>
 </head>
+
 <body>
-  <!-- Agrega esto justo después de <body> -->
-<header style="background: linear-gradient(90deg, #1976d2, #2196f3); padding: 22px 0; box-shadow: 0 2px 6px rgba(0,0,0,0.12);">
-  <div style="display:flex; align-items:center; justify-content:center; gap:14px; max-width:900px; margin:0 auto;">
-    <img src="evarstat-logo.png" alt="EVAR Stat" style="width:54px; height:54px; object-fit:contain; border-radius:12px; background:white; padding:6px;">
-    <h1 style="margin:0; font-size:1.9rem; font-weight:700; line-height:1.2; color:#fff; letter-spacing:-0.5px;">
-      Foro de la Comunidad EVAR Stat
-    </h1>
-  </div>
-</header>
-</div>
-  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-database-compat.js"></script>
-  <script>
-    // Configuración del proyecto
-    const firebaseConfig = {
-      apiKey: "AIzaSyD91BEba43lxr-kEqgibgRLyV9v-HiRaP4",
-      authDomain: "evar-stat.firebaseapp.com",
-      databaseURL: "https://evar-stat-default-rtdb.firebaseio.com", 
-      projectId: "evar-stat",
-      storageBucket: "evar-stat.firebasestorage.app",
-      messagingSenderId: "697146517077",
-      appId: "1:697146517077:web:55dfce33c4fde85b4b56dc",
-      measurementId: "G-10JMJ80QFT"
-    };
-    firebase.initializeApp(firebaseConfig);
-    const db = firebase.database();
-
-    function addFaqQuestion(question, email, callback) {
-      db.ref('faq').push({ question, email, answers: [] }, callback);
-    }
-
-    function addFaqAnswer(faqId, text, email, callback) {
-      db.ref(`faq/${faqId}/answers`).once('value', snap => {
-        const answers = snap.val() || [];
-        answers.push({ text, email });
-        db.ref(`faq/${faqId}/answers`).set(answers, callback);
-      });
-    }
-
-    function deleteFaqQuestion(faqId, callback) {
-      db.ref(`faq/${faqId}`).remove(callback);
-    }
-
-    function deleteFaqAnswer(faqId, answerIdx, callback) {
-      db.ref(`faq/${faqId}/answers`).once('value', snap => {
-        const answers = snap.val() || [];
-        answers.splice(answerIdx, 1);
-        db.ref(`faq/${faqId}/answers`).set(answers, callback);
-      });
-    }
-
-    function getFaqData(callback) {
-      db.ref('faq').on('value', snapshot => {
-        const data = snapshot.val() || {};
-        const arr = Object.entries(data).map(([id, value]) => ({ id, ...value }));
-        callback(arr.reverse());
-      });
-    }
-  </script>
-  <div class="faq-search-fixed">
-    <div class="faq-search-box">
-      <input type="text" id="faq-search" placeholder="Buscar palabra">
-      <button id="faq-search-btn" type="button">Buscar</button>
+  <!-- Barra de navegación -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <img src="evarstat-logo.png" alt="Logo de EVAR Stat, software estadístico" class="logo" />
+      <nav class="menu" id="menu">
+        <a href="index.html#inicio">Inicio</a>
+        <a href="index.html#caracteristicas">Características</a>
+        <a href="index.html#descargas">Descargas</a>
+        <a href="tutorial.html">Tutoriales</a>
+        <a href="index.html#contacto">Contacto</a>
+        <a href="donaciones.html" class="donate-cta">Donaciones</a>
+      </nav>
+      <button class="menu-toggle" id="menu-toggle">&#9776;</button>
     </div>
-  </div>
+  </header>
 
-  <!-- NUEVO: tarjeta propia para identidad -->
-  <div class="identity-card">
-    <div id="identity-box" class="identity-box"></div>
-  </div>
-
-  <div class="faq-section">
-    <form id="faq-form" class="faq-form" autocomplete="off">
-      <input type="text" id="faq-question" maxlength="300" placeholder="Escribe tu pregunta..." required>
-      <button type="submit">Publicar</button>
-    </form>
-    <div id="faq-loading" style="text-align:center;display:none;background:transparent;">
-      <img src="loader.gif" alt="Cargando..." style="width:200px;height:200px;vertical-align:middle;background:transparent;">
+  <!-- Hero -->
+  <section class="donate-hero">
+    <div class="container" style="max-width:900px;">
+      <p>Tu donación ayuda a mantener y mejorar el software, la web y la documentación.</p>
+      <p class="small">Gracias por el apoyo</p>
     </div>
-    <div id="faq-list" class="faq-list"></div>
+  </section>
+
+  <main class="container" style="max-width:1000px; padding: 1.6rem 1rem 2.8rem;">
+    <div class="donate-grid">
+
+        <!-- Yape -->
+      <div class="card">
+        <h3><img class="brand-logo brand-lg brand-md" src="img/logos/yape.png" alt="Yape"></h3>
+        <div class="qr">
+          <div>
+            <!-- clic para ampliar (zoom) -->
+            <img loading="lazy"
+                 src="img/logos/yape-qr.png"
+                 alt="QR Yape para donar a Erick Victor Araujo Rivasplata"
+                 style="cursor:zoom-in"
+                 onclick="qrZoomOpen(this.src, this.alt)">
+          </div>
+          <div class="small">
+            <a href="#" id="yape-toggle" onclick="toggleYape();return false;">Mostrar número</a>
+            <div id="yape-extra" style="display:none; margin-top:.5rem;">
+              <div><strong>Número Yape:</strong> <span id="yape-number" data-copy="931417388">931 417 388</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Transferencia BCP -->
+      <div class="card">
+        <h3><img class="brand-logo brand-lg brand-md" src="img/logos/bcp.png" alt="BCP"></h3>
+        <ul class="small" style="margin:.4rem 0 0 .05rem;">
+          <li>Cuenta BCP (S/): <strong id="bcp-cta" data-copy="30598215418079">30598215418079</strong></li>
+          <li>CCI (S/): <strong id="bcp-cci" data-copy="00230519821541807916">00230519821541807916</strong></li>
+        </ul>
+        <p class="small center">Para bancos distintos al BCP usa el CCI.</p>
+      </div>
+      
+            <!-- Western Union -->
+      <div class="card">
+        <h3><img class="brand-logo brand-sm" src="img/logos/westernunion.png" alt="Western Union"></h3>
+        <ul class="small" style="margin:.4rem 0 0 0.05rem;">
+          <li>Nombres y apellidos: <strong id="wu-name" data-copy="Erick Victor Araujo Rivasplata">Erick Victor Araujo Rivasplata</strong></li>
+          <li>País: <strong id="wu-country" data-copy="Perú">Perú</strong></li>
+          <li>Celular: <strong id="wu-phone" data-copy="+51931417388">+51 931417388</strong></li>
+          <li>Correo: <strong id="wu-email" data-copy="contacto@evarstat.com">contacto@evarstat.com</strong></li>
+        </ul>
+        <div class="small center center-col" style="margin-top:.6rem;"> <!-- agregado center-col -->
+
+          <!-- Ahora: enlace como el de Yape -->
+          <a href="#"
+             id="wu-notify-toggle"
+             aria-expanded="false"
+             aria-controls="wu-notify-actions"
+             onclick="toggleInline('wu-notify-actions', this); return false;">
+            Notificar el envío del MTCN
+          </a>
+
+          <div id="wu-notify-actions" class="inline-actions" role="group" aria-label="Opciones para notificar envío">
+            <a class="btn-primary"
+               href="mailto:contacto@evarstat.com?subject=Donaci%C3%B3n%20Western%20Union%20-%20EVAR%20Stat&body=Hola%20EVAR%20Stat,%20hice%20una%20donaci%C3%B3n%20por%20Western%20Union.%0A%0AMTCN:%20%0AMonto:%20%0APa%C3%ADs:%20%0ANombre%20remitente:%20"
+               target="_blank" rel="noopener">
+              Por correo
+            </a>
+            <a class="btn-primary"
+               href="https://wa.me/51931417388?text=Hola%20EVAR%20Stat,%20hice%20una%20donaci%C3%B3n%20por%20Western%20Union.%0A%0AMTCN:%0AMonto:%0APa%C3%ADs:%0ANombre%20remitente:%20"
+               target="_blank" rel="noopener">
+              WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mercado Pago -->
+      <div class="card">
+        <h3><img class="brand-logo brand-sm" src="img/logos/mercadopago.png" alt="Mercado Pago"></h3>
+        <a class="btn-primary btn-center" href="https://link.mercadopago.com.pe/evarstat" target="_blank" rel="noopener noreferrer nofollow">Donar</a>
+      </div>
+
+      <!-- PayPal -->
+      <div class="card">
+        <h3>
+          <img class="brand-logo brand-sm" src="img/logos/paypal.png" alt="PayPal">
+        </h3>
+        <a class="btn-primary btn-center" href="https://paypal.me/Erick1Araujo"
+           target="_blank" rel="noopener noreferrer nofollow">Donar</a>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2025 EVAR Stat. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- Modal para ver el QR en grande -->
+  <div id="qrZoom" class="qr-zoom-overlay" tabindex="-1" aria-hidden="true" onclick="qrZoomClose()">
+    <img id="qrZoomImg" class="qr-zoom-img" src="" alt="QR Yape ampliado" onclick="event.stopPropagation()">
   </div>
+
   <script>
-    function setCurrentUser(email) {
-      localStorage.setItem('faqCurrentUser', email);
-    }
-    function getCurrentUser() {
-      return localStorage.getItem('faqCurrentUser') || '';
-    }
-    function clearCurrentUser() {
-      localStorage.removeItem('faqCurrentUser');
-    }
-    function getNameFromEmail(email) {
-      if (!email) return '';
-      return email.split('@')[0];
-    }
+    // Menú responsive (igual que index)
+    const menuToggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('menu');
+    if (menuToggle) menuToggle.addEventListener('click', () => menu.classList.toggle('show'));
 
-    let searchTerm = "";
-    let lastFaqData = []; // Mantén los datos actuales para búsquedas y acciones
-
-    function renderIdentityBox() {
-      const box = document.getElementById('identity-box');
-      const currentUser = getCurrentUser();
-      if (currentUser) {
-        box.innerHTML = `
-          <div class="identity-info">Usuario: <b>${getNameFromEmail(currentUser)}</b></div>
-          <div class="small">Tu correo se usa para identificar tus preguntas y respuestas.</div>
-          <button id="change-identity-btn">Cambiar identidad</button>
-        `;
-        document.getElementById('change-identity-btn').onclick = function() {
-          if (confirm('¿Seguro que deseas cambiar tu identidad?')) {
-            clearCurrentUser();
-            renderIdentityBox();
-          }
-        };
-      } else {
-        box.innerHTML = `
-          <div class="small" style="margin-bottom:10px;">
-            <b>Para participar debes ingresar tu correo.</b><br>
-          </div>
-          <input type="email" id="identity-email" placeholder="Tu correo electrónico" required>
-          <button id="set-identity-btn">Usar este correo</button>
-        `;
-        document.getElementById('set-identity-btn').onclick = function() {
-          const email = document.getElementById('identity-email').value.trim();
-          if (email && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-            setCurrentUser(email);
-            renderIdentityBox();
-            renderFaq(lastFaqData); // <-- Agrega esta línea
-          } else {
-            alert("Por favor, ingresa un correo válido.");
-          }
-        };
-      }
-    }
-
-    // Renderizar preguntas y respuestas (con búsqueda)
-    function renderFaq(data) {
-      lastFaqData = data; // Guarda los datos actuales para búsquedas y acciones
-      const faqList = document.getElementById('faq-list');
-      const currentUser = getCurrentUser();
-      let filteredData = data;
-
-      // Filtrar por búsqueda
-      if (searchTerm.trim() !== "") {
-        const term = searchTerm.trim().toLowerCase();
-        filteredData = data.filter(item =>
-          item.question.toLowerCase().includes(term) ||
-          (item.answers && item.answers.some(a => a.text.toLowerCase().includes(term)))
-        );
-      }
-
-      faqList.innerHTML = '';
-      if (filteredData.length === 0) {
-        faqList.innerHTML = '<div style="text-align:center;color:#888;"></div>';
-        return;
-      }
-      filteredData.forEach((item, idx) => {
-        // idxGlobal es el índice real en el array original
-        const idxGlobal = data.indexOf(item);
-        const div = document.createElement('div');
-        div.className = 'faq-item';
-        let deleteQuestionBtn = '';
-        if (currentUser && item.email === currentUser) {
-          deleteQuestionBtn = `<button class="delete-btn" data-type="question" data-id="${item.id}" title="Eliminar pregunta">&#128465;</button>`;
-        }
-        div.innerHTML = `
-          <div class="faq-question-text">
-            <img src="https://ui-avatars.com/api/?name=${getNameFromEmail(item.email)}&background=random&color=fff&rounded=true&size=32" alt="avatar" style="vertical-align:middle;margin-right:6px;">
-            <span>${item.question}</span>
-            ${deleteQuestionBtn}
-          </div>
-          <div class="faq-question-meta">Preguntado por <b>${item.email ? getNameFromEmail(item.email) : 'Anónimo'}</b></div>
-          <div class="faq-answers">
-            ${(item.answers || []).map((a, aidx) => {
-              let deleteAnswerBtn = '';
-              if (currentUser && a.email === currentUser) {
-                deleteAnswerBtn = `<button class="delete-btn" data-type="answer" data-id="${item.id}" data-aidx="${aidx}" title="Eliminar respuesta">&#128465;</button>`;
-              }
-              return `
-                <div class="faq-answer">
-                  <div class="faq-answer-meta">
-                      <img src="https://ui-avatars.com/api/?name=${getNameFromEmail(a.email)}&background=random&color=fff&rounded=true&size=24" alt="avatar" style="vertical-align:middle;margin-right:4px;">
-                      Respondido por <b>${a.email ? getNameFromEmail(a.email) : 'Anónimo'}</b>
-                    ${deleteAnswerBtn}
-                  </div>
-                  ${a.text}
-                </div>
-              `;
-            }).join('')}
-          </div>
-          <form class="faq-answer-form" data-id="${item.id}">
-            <input type="text" maxlength="300" placeholder="Responder..." required ${!currentUser ? "disabled" : ""}>
-            <button type="submit" ${!currentUser ? "disabled" : ""}>Responder</button>
-          </form>
-        `;
-        faqList.appendChild(div);
+    function copyText(selector){
+      const el = document.querySelector(selector);
+      if(!el) return;
+      const txt = (el.dataset.copy || el.textContent || "").trim();
+      navigator.clipboard?.writeText(txt).then(()=>{}).catch(()=>{
+        const ta = document.createElement('textarea');
+        ta.value = txt; document.body.appendChild(ta); ta.select();
+        document.execCommand('copy'); document.body.removeChild(ta);
       });
-
-      // Eliminar pregunta o respuesta
-      document.querySelectorAll('.delete-btn').forEach(btn => {
-        btn.onclick = function(e) {
-          e.preventDefault();
-          const type = this.getAttribute('data-type');
-          const id = this.getAttribute('data-id');
-          if (type === "question") {
-            if (confirm("¿Seguro que deseas eliminar esta pregunta y todas sus respuestas?")) {
-              deleteFaqQuestion(id);
-            }
-          } else if (type === "answer") {
-            const aidx = parseInt(this.getAttribute('data-aidx'));
-            if (confirm("¿Seguro que deseas eliminar esta respuesta?")) {
-              deleteFaqAnswer(id, aidx);
-            }
-          }
-        };
-      });
-
-      // Formularios de respuesta
-      document.querySelectorAll('.faq-answer-form').forEach(form => {
-        form.onsubmit = function(e) {
-          e.preventDefault();
-          const id = this.getAttribute('data-id');
-          const respuesta = this.querySelector('input[type="text"]').value.trim();
-          const currentUser = getCurrentUser();
-          let email = currentUser || '';
-          if (!respuesta) {
-            alert("Por favor, ingresa una respuesta.");
-            return;
-          }
-          if (!email) return;
-          addFaqAnswer(id, respuesta, email, function() {
-            form.querySelector('input[type="text"]').value = '';
-          });
-        };
-      });
-
-      // Deshabilitar formulario de pregunta si no hay identidad
-      document.getElementById('faq-question').disabled = !currentUser;
-      document.querySelector('#faq-form button[type="submit"]').disabled = !currentUser;
     }
 
-    // Publicar pregunta
-    document.getElementById('faq-form').onsubmit = function(e) {
-      e.preventDefault();
-      const pregunta = document.getElementById('faq-question').value.trim();
-      const currentUser = getCurrentUser();
-      let email = currentUser || '';
-      if (!pregunta) {
-        alert("Por favor, ingresa una pregunta.");
-        return;
-      }
-      if (!email) return;
-      addFaqQuestion(pregunta, email, function() {
-        document.getElementById('faq-question').value = '';
-      });
-    };
+    function toggleYape(){
+      const box = document.getElementById('yape-extra');
+      const link = document.getElementById('yape-toggle');
+      const open = box.style.display !== 'none';
+      box.style.display = open ? 'none' : 'block';
+      link.textContent = open ? 'Mostrar número' : 'Ocultar número';
+    }
 
-    // Resalta todas las coincidencias y hace scroll a la primera visible
-    function highlightAndScrollToMatches(term) {
-      if (!term) return;
-      const faqList = document.getElementById('faq-list');
-      const items = faqList.querySelectorAll('.faq-item');
-      let firstMatch = null;
-
-      items.forEach(item => {
-        item.querySelectorAll('.highlight-search').forEach(span => {
-          span.outerHTML = span.innerText;
-        });
-
-        const question = item.querySelector('.faq-question-text span');
-        if (question && question.innerText.toLowerCase().includes(term.toLowerCase())) {
-          highlightText(question, term);
-          if (!firstMatch) firstMatch = question;
-        }
-
-        const answers = item.querySelectorAll('.faq-answer');
-        answers.forEach(answer => {
-          if (answer.innerText.toLowerCase().includes(term.toLowerCase())) {
-            highlightText(answer, term);
-            if (!firstMatch) firstMatch = answer;
-          }
-        });
-      });
-
-      if (firstMatch) {
-        let parentItem = firstMatch.closest('.faq-item');
-        if (parentItem) {
-          parentItem.scrollIntoView({ behavior: "smooth", block: "center" });
-        } else {
-          firstMatch.scrollIntoView({ behavior: "smooth", block: "center" });
-        }
+    // NUEVO: despliegue/ocultar acciones en línea
+    function toggleInline(id, trigger){
+      const box = document.getElementById(id);
+      if(!box) return;
+      const show = !box.classList.contains('show');
+      box.classList.toggle('show', show);
+      if (trigger) {
+        trigger.setAttribute('aria-expanded', show ? 'true' : 'false');
+        trigger.textContent = show ? 'Notificar el envío' : 'Notificar el envío';
       }
     }
 
-    function highlightText(element, term) {
-      const regex = new RegExp(`(${term})`, 'gi');
-      element.innerHTML = element.innerText.replace(regex, '<span class="highlight-search">$1</span>');
+    // Zoom del QR (solo Yape)
+    function qrZoomOpen(src, alt){
+      const m = document.getElementById('qrZoom');
+      const i = document.getElementById('qrZoomImg');
+      i.src = src; i.alt = alt;
+      m.classList.add('show');
+      document.body.style.overflow = 'hidden';
+      m.focus();
     }
-
-    document.getElementById('faq-search-btn').onclick = function() {
-      searchTerm = document.getElementById('faq-search').value;
-      renderFaq(lastFaqData);
-      setTimeout(() => highlightAndScrollToMatches(searchTerm), 100);
-    };
-    document.getElementById('faq-search').addEventListener('keyup', function(e) {
-      if (e.key === "Enter") {
-        searchTerm = this.value;
-        renderFaq(lastFaqData);
-        setTimeout(() => highlightAndScrollToMatches(searchTerm), 100);
-      }
-    });
-
-    // Inicializar
-    renderIdentityBox();
-    // Muestra el loader antes de cargar datos
-    document.getElementById('faq-loading').style.display = 'block';
-    getFaqData(function(data) {
-      document.getElementById('faq-loading').style.display = 'none';
-      renderFaq(data);
+    function qrZoomClose(){
+      const m = document.getElementById('qrZoom');
+      m.classList.remove('show');
+      document.body.style.overflow = '';
+    }
+    document.addEventListener('keydown', (e)=>{
+      if(e.key === 'Escape') qrZoomClose();
     });
   </script>
-  <!-- Agrega esto antes de </body> -->
-<button class="fab-question" title="Nueva pregunta" onclick="document.getElementById('faq-question').focus();">+</button>
 </body>
 </html>
-
-
-
-
-
-
