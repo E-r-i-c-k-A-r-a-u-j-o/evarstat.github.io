@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="Content-Language" content="es">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Donaciones | EVAR Stat</title>
+  <meta name="description" content="Apoya el desarrollo de EVAR Stat con una donación. Tu aporte ayuda a mantener y mejorar el software." />
+  <link rel="canonical" href="https://evarstat.com/donaciones.html" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="estilos.css" />
+
+  <!-- Google Analytics (mismo ID que index) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4DGWQHFF2H"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-4DGWQHFF2H');
+  </script>
+
+  <style>
+    .donate-hero {
+      background: linear-gradient(120deg, #1976d2 0%, #42a5f5 100%);
+      color: #fff; text-align: center; padding: 3.2rem 0 2.2rem;
+    }
+    .donate-hero p  { margin: 0; font-size: 1.05rem; opacity: .95; }
+    .donate-grid {
+      display: grid; gap: 1.2rem; grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+      margin-top: 1.2rem;
+    }
+    .card {
+      background: #fff; border-radius: 14px; padding: 1.1rem 1rem;
+      box-shadow: 0 6px 22px rgba(25,118,210,.08);
+    }
+    .card h3 { margin:.2rem 0 .5rem; color:#1976d2; display:flex; align-items:center; gap:.45rem; justify-content:center; }
+    .brand-logo { height:auto; width:auto; }
+    .brand-lg { height:70px; }  /* tamaño único para todos los logos */
+    .brand-logo.brand-sm { height:58px; } /* logos un poco más pequeños (WU, PayPal, MP) */
+
+    .btn-primary.btn-center {
+      display: block;
+      margin: .8rem auto 0;
+      text-align: center;
+      width: clamp(130px, 30%, 230px); /* nuevo: ancho reducido y responsive */
+      border-radius: 28px;
+    }
+    .btn-primary img.logo-inline, .btn-outline img.logo-inline { height:18px; width:auto; vertical-align:-3px; margin-right:.45rem; }
+    .btn-primary, .btn-outline {
+      display: inline-block; text-decoration: none; font-weight: 700;
+      padding: .7rem 1.4rem; border-radius: 28px; margin-top: .6rem;
+    }
+    .btn-primary { background: #1976d2; color: #fff; }
+    .btn-primary:hover { background: #0d47a1; }
+    .btn-outline { border: 2px solid #1976d2; color: #1976d2; }
+    .btn-outline:hover { background:#e3f2fd; }
+    .qr {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: .6rem;
+      margin-top: .8rem;
+      text-align: center;
+    }
+    .qr img {
+      width: 130px;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,.08);
+      background: #fff;
+    }
+    .qr img {
+      animation: fadeZoom .6s ease;
+    }
+
+    @keyframes fadeZoom {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    .qr img { width:120px; height:auto; border-radius:10px; box-shadow:0 2px 10px rgba(0,0,0,.08); background:#fff; }
+    .small { font-size: .92rem; color:#555; }
+    .center { text-align:center; }
+    .center-col { display:flex; flex-direction:column; align-items:center; } /* NUEVO */
+
+    /* NUEVO: acciones desplegables en línea */
+    .inline-actions { display:none; margin-top:.5rem; gap:.5rem; align-items:center; flex-wrap:wrap; justify-content:center; } /* centrado */
+    .inline-actions.show { display:flex; }
+    .notify-toggle { background:none; border:0; color:#1976d2; font-weight:700; cursor:pointer; padding:0; }
+    .notify-toggle:hover { text-decoration: underline; }
+
+    /* Zoom del QR (solo Yape) */
+    .qr-zoom-overlay{
+      position:fixed; inset:0; display:none;
+      align-items:center; justify-content:center;
+      background:rgba(0,0,0,.85); z-index:10000; padding:1rem;
+    }
+    .qr-zoom-overlay.show{ display:flex; }
+    .qr-zoom-img{
+      max-width:60vw; max-height:60vh;
+      border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,.5);
+      background:#fff;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Barra de navegación -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <img src="evarstat-logo.png" alt="Logo de EVAR Stat, software estadístico" class="logo" />
+      <nav class="menu" id="menu">
+        <a href="index.html#inicio">Inicio</a>
+        <a href="index.html#caracteristicas">Características</a>
+        <a href="index.html#descargas">Descargas</a>
+        <a href="tutorial.html">Tutoriales</a>
+        <a href="index.html#contacto">Contacto</a>
+        <a href="donaciones.html" class="donate-cta">Donaciones</a>
+      </nav>
+      <button class="menu-toggle" id="menu-toggle">&#9776;</button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="donate-hero">
+    <div class="container" style="max-width:900px;">
+      <p>Tu donación ayuda a mantener y mejorar el software, la web y la documentación.</p>
+      <p class="small">Gracias por el apoyo</p>
+    </div>
+  </section>
+
+  <main class="container" style="max-width:1000px; padding: 1.6rem 1rem 2.8rem;">
+    <div class="donate-grid">
+
+        <!-- Yape -->
+      <div class="card">
+        <h3><img class="brand-logo brand-lg brand-md" src="img/logos/yape.png" alt="Yape"></h3>
+        <div class="qr">
+          <div>
+            <!-- clic para ampliar (zoom) -->
+            <img loading="lazy"
+                 src="img/logos/yape-qr.png"
+                 alt="QR Yape para donar a Erick Victor Araujo Rivasplata"
+                 style="cursor:zoom-in"
+                 onclick="qrZoomOpen(this.src, this.alt)">
+          </div>
+          <div class="small">
+            <a href="#" id="yape-toggle" onclick="toggleYape();return false;">Mostrar número</a>
+            <div id="yape-extra" style="display:none; margin-top:.5rem;">
+              <div><strong>Número Yape:</strong> <span id="yape-number" data-copy="931417388">931 417 388</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Transferencia BCP -->
+      <div class="card">
+        <h3><img class="brand-logo brand-lg brand-md" src="img/logos/bcp.png" alt="BCP"></h3>
+        <ul class="small" style="margin:.4rem 0 0 .05rem;">
+          <li>Cuenta BCP (S/): <strong id="bcp-cta" data-copy="30598215418079">30598215418079</strong></li>
+          <li>CCI (S/): <strong id="bcp-cci" data-copy="00230519821541807916">00230519821541807916</strong></li>
+        </ul>
+        <p class="small center">Para bancos distintos al BCP usa el CCI.</p>
+      </div>
+      
+            <!-- Western Union -->
+      <div class="card">
+        <h3><img class="brand-logo brand-sm" src="img/logos/westernunion.png" alt="Western Union"></h3>
+        <ul class="small" style="margin:.4rem 0 0 0.05rem;">
+          <li>Nombres y apellidos: <strong id="wu-name" data-copy="Erick Victor Araujo Rivasplata">Erick Victor Araujo Rivasplata</strong></li>
+          <li>País: <strong id="wu-country" data-copy="Perú">Perú</strong></li>
+          <li>Celular: <strong id="wu-phone" data-copy="+51931417388">+51 931417388</strong></li>
+          <li>Correo: <strong id="wu-email" data-copy="contacto@evarstat.com">contacto@evarstat.com</strong></li>
+        </ul>
+        <div class="small center center-col" style="margin-top:.6rem;"> <!-- agregado center-col -->
+
+          <!-- Ahora: enlace como el de Yape -->
+          <a href="#"
+             id="wu-notify-toggle"
+             aria-expanded="false"
+             aria-controls="wu-notify-actions"
+             onclick="toggleInline('wu-notify-actions', this); return false;">
+            Notificar el envío del MTCN
+          </a>
+
+          <div id="wu-notify-actions" class="inline-actions" role="group" aria-label="Opciones para notificar envío">
+            <a class="btn-primary"
+               href="mailto:contacto@evarstat.com?subject=Donaci%C3%B3n%20Western%20Union%20-%20EVAR%20Stat&body=Hola%20EVAR%20Stat,%0A%0AMTCN:%20__________%0AMonto/Moneda:%20__________%0APa%C3%ADs/Ciudad%20de%20origen:%20__________%0ANombre%20remitente:%20__________"
+               target="_blank" rel="noopener">
+              Por correo
+            </a>
+            <a class="btn-primary"
+               href="https://wa.me/51931417388?text=Hola%20EVAR%20Stat,%20hice%20una%20donaci%C3%B3n%20por%20Western%20Union.%20MTCN:%20%20%20%20%20,Monto:%20%20%20%20%20,Pa%C3%ADs:%20%20%20%20%20"
+               target="_blank" rel="noopener">
+              WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mercado Pago -->
+      <div class="card">
+        <h3><img class="brand-logo brand-sm" src="img/logos/mercadopago.png" alt="Mercado Pago"></h3>
+        <a class="btn-primary btn-center" href="https://link.mercadopago.com.pe/evarstat" target="_blank" rel="noopener noreferrer nofollow">Donar</a>
+      </div>
+
+      <!-- PayPal -->
+      <div class="card">
+        <h3>
+          <img class="brand-logo brand-sm" src="img/logos/paypal.png" alt="PayPal">
+        </h3>
+        <a class="btn-primary btn-center" href="https://paypal.me/Erick1Araujo"
+           target="_blank" rel="noopener noreferrer nofollow">Donar</a>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2025 EVAR Stat. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- Modal para ver el QR en grande -->
+  <div id="qrZoom" class="qr-zoom-overlay" tabindex="-1" aria-hidden="true" onclick="qrZoomClose()">
+    <img id="qrZoomImg" class="qr-zoom-img" src="" alt="QR Yape ampliado" onclick="event.stopPropagation()">
+  </div>
+
+  <script>
+    // Menú responsive (igual que index)
+    const menuToggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('menu');
+    if (menuToggle) menuToggle.addEventListener('click', () => menu.classList.toggle('show'));
+
+    function copyText(selector){
+      const el = document.querySelector(selector);
+      if(!el) return;
+      const txt = (el.dataset.copy || el.textContent || "").trim();
+      navigator.clipboard?.writeText(txt).then(()=>{}).catch(()=>{
+        const ta = document.createElement('textarea');
+        ta.value = txt; document.body.appendChild(ta); ta.select();
+        document.execCommand('copy'); document.body.removeChild(ta);
+      });
+    }
+
+    function toggleYape(){
+      const box = document.getElementById('yape-extra');
+      const link = document.getElementById('yape-toggle');
+      const open = box.style.display !== 'none';
+      box.style.display = open ? 'none' : 'block';
+      link.textContent = open ? 'Mostrar número' : 'Ocultar número';
+    }
+
+    // NUEVO: despliegue/ocultar acciones en línea
+    function toggleInline(id, trigger){
+      const box = document.getElementById(id);
+      if(!box) return;
+      const show = !box.classList.contains('show');
+      box.classList.toggle('show', show);
+      if (trigger) {
+        trigger.setAttribute('aria-expanded', show ? 'true' : 'false');
+        trigger.textContent = show ? 'Notificar el envío del MTCN' : 'Notificar el envío del MTCN';
+      }
+    }
+
+    // Zoom del QR (solo Yape)
+    function qrZoomOpen(src, alt){
+      const m = document.getElementById('qrZoom');
+      const i = document.getElementById('qrZoomImg');
+      i.src = src; i.alt = alt;
+      m.classList.add('show');
+      document.body.style.overflow = 'hidden';
+      m.focus();
+    }
+    function qrZoomClose(){
+      const m = document.getElementById('qrZoom');
+      m.classList.remove('show');
+      document.body.style.overflow = '';
+    }
+    document.addEventListener('keydown', (e)=>{
+      if(e.key === 'Escape') qrZoomClose();
+    });
+  </script>
+</body>
+</html>
