@@ -74,6 +74,36 @@ body {
   text-decoration: none;
 }
 
+/* CTA Donaciones en navbar */
+.menu a.donate-cta{
+  background: linear-gradient(135deg,#ff7a18 0%,#ffb300 100%);
+  color:#fff !important;
+  padding:.50rem 1rem;
+  border-radius:999px;
+  font-weight:600;
+  margin-left:.6rem;
+  box-shadow:0 6px 16px rgba(255,152,0,.32);
+  border:1px solid rgba(255,255,255,.18);
+  position: relative;           /* añadido para brillo */
+  overflow: hidden;             /* recorta el brillo */
+}
+.menu a.donate-cta::before{
+  content:"";
+  margin-right:.45rem;
+  font-size:.95em;
+}
+.menu a.donate-cta:hover{
+  transform: translateY(-6px) scale(1.01);
+  box-shadow:0 2px 8px rgba(255,152,0,.46);
+}
+.menu a.donate-cta:focus-visible{
+  outline:3px solid #ffe082;
+  outline-offset:2px;
+}
+@media (max-width:768px){
+  .menu a.donate-cta{ display:inline-block; margin:.5rem 0 0; }
+}
+
 .menu-toggle {
   display: none;
   background: #fff;
@@ -611,4 +641,27 @@ html {
     width: 100%;
     max-width: 98vw;
   }
+}
+
+/* Brillo sutil (solo Donaciones) */
+.menu a.donate-cta::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: linear-gradient(120deg, transparent 30%, rgba(255,255,255,.45), transparent 70%);
+  transform: translateX(-120%);
+  animation: shine 6s linear infinite;
+  pointer-events:none;
+}
+
+/* Animación del brillo */
+@keyframes shine {
+  0%   { transform: translateX(-120%); }
+  12%  { transform: translateX(120%); }
+  100% { transform: translateX(120%); }
+}
+
+/* Accesibilidad: sin animación si el usuario lo prefiere */
+@media (prefers-reduced-motion: reduce){
+  .menu a.donate-cta::after{ animation: none; }
 }
