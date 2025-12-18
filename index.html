@@ -144,7 +144,9 @@
   <!-- Barra de navegación -->
   <header class="navbar">
     <div class="container nav-container">
-      <img src="evarstat-logo.png" alt="Logo de EVAR Stat, software estadístico" class="logo" />
+      <a href="#inicio">
+        <img src="evarstat-logo.png" alt="Logo de EVAR Stat, software estadístico" class="logo" />
+      </a>
       <nav class="menu" id="menu">
         <a href="#inicio">Inicio</a>
         <a href="#caracteristicas">Características</a>
@@ -161,7 +163,16 @@
 <section class="hero" id="inicio" data-aos="fade-up">
   <div class="container hero-content">
     <h1>EVAR Stat</h1>
-    <a href="#descargas" class="btn" data-aos="zoom-in" data-aos-delay="400">Descargar ahora</a>
+    <a
+      href="https://github.com/E-r-i-c-k-A-r-a-u-j-o/evarstat.github.io/releases/download/v3.0.0/EVAR-Stat-3.0-winx64.exe"
+      class="btn"
+      download
+      data-aos="zoom-in"
+      data-aos-delay="400"
+      onclick="gtag('event','download_click',{event_category:'Descargas',event_label:'Win64'});"
+    >
+      Descargar ahora
+    </a>
   </div>
 </section>
 
@@ -211,35 +222,35 @@
     </div>
   </section>
 
-  <!-- Descargas -->
-  <section class="downloads" id="descargas" data-aos="fade-up">
-    <div class="container">
-      <h2 data-aos="fade-right">Descargar</h2>
-      <a
-        href="https://github.com/E-r-i-c-k-A-r-a-u-j-o/evarstat.github.io/releases/download/v3.0.0/EVAR-Stat-3.0-winx64.exe"
-        class="btn-dark"
-        download
-        data-aos="zoom-in"
-        data-aos-delay="200"
-        onclick="gtag('event','download_click',{event_category:'Descargas',event_label:'Win64'});"
-      >
-        EVAR-Stat-3.0-winx64.exe
-      </a>
-    </div>
-  </section>
+<!-- Descargas -->
+<section class="downloads" id="descargas" data-aos="fade-up">
+  <div class="container">
+    <h2 data-aos="fade-right">Descargar</h2>
+    <a
+      href="https://github.com/E-r-i-c-k-A-r-a-u-j-o/evarstat.github.io/releases/download/v3.0.0/EVAR-Stat-3.0-winx64.exe"
+      class="btn-dark"
+      download
+      data-aos="zoom-in"
+      data-aos-delay="200"
+      onclick="gtag('event','download_click',{event_category:'Descargas',event_label:'Win64'});"
+    >
+      EVAR-Stat-3.0-winx64.exe
+    </a>
+  </div>
+</section>
 
-  <!-- Documentación -->
-  <section class="documentation" id="documentacion" data-aos="fade-up">
-    <div class="container">
-      <h2 data-aos="fade-right">Documentación</h2>
-      <ul>
-        <li data-aos="fade-left" data-aos-delay="200"><a href="faq.html" target="_blank">Preguntas frecuentes (Foro)</a></li>
-        <li data-aos="fade-left" data-aos-delay="100"><a href="EVAR-Stat-Software-estadistico.pdf" target="_blank">EVAR Stat - Software de estadística (PDF)</a></li>
-        <li data-aos="fade-left" data-aos-delay="100"><a href="Manual-de-usuario.pdf" target="_blank">Manual de usuario (PDF)</a></li>
-        <li data-aos="fade-left" data-aos-delay="100"><a href="Crear_Subir_Plugin.pdf" target="_blank">Plugin y extensiones (PDF)</a></li>
-      </ul>
-    </div>
-  </section>
+<!-- Documentación -->
+<section class="documentation" id="documentacion" data-aos="fade-up">
+  <div class="container">
+    <h2 data-aos="fade-right">Documentación</h2>
+    <ul>
+      <li data-aos="fade-left" data-aos-delay="200"><a href="faq.html" target="_blank">Preguntas frecuentes (Foro)</a></li>
+      <li data-aos="fade-left" data-aos-delay="100"><a href="EVAR-Stat-Software-estadistico.pdf" target="_blank">EVAR Stat - Software de estadística (PDF)</a></li>
+      <li data-aos="fade-left" data-aos-delay="100"><a href="Manual-de-usuario.pdf" target="_blank">Manual de usuario (PDF)</a></li>
+      <li data-aos="fade-left" data-aos-delay="100"><a href="Crear_Subir_Plugin.pdf" target="_blank">Plugin y extensiones (PDF)</a></li>
+    </ul>
+  </div>
+</section>
 
 <!-- Contacto -->
 <section class="contact" id="contacto" data-aos="fade-up">
@@ -263,6 +274,7 @@
 <section class="plugins" id="plugins" data-aos="fade-up">
   <div class="container">
     <h2>Plugins</h2>
+    <p>
     Descarga plugins desarrollados por la comunidad o contribuye con los tuyos en nuestro repositorio.
     </p>
     <ul>
@@ -330,60 +342,12 @@
   </div>
   </section>
 
-<!-- Novedades -->
-<section class="novedades" id="novedades" data-aos="fade-up">
-  <div class="container">
-    <h2 data-aos="fade-right" style="font-size:2.2rem; color:#1976d2; font-weight:800; margin-bottom:1.2rem; text-align:center;">
-      Novedades
-    </h2>
-
-    <!-- Contenedor en fila -->
-    <div class="novedades-cards" style="display:flex; gap:20px; justify-content:center; flex-wrap:wrap;">
-      
-      <!-- Card 1 -->
-      <div class="novedad-card" data-aos="zoom-in" data-aos-delay="200" style="flex:1; min-width:320px;">
-        <div>
-          <div class="novedad-titulo">¡Nos actualizamos a EVAR Stat 3!</div>
-          <div class="novedad-desc">
-            <ul style="margin:8px 0; padding-left:20px; text-align:left;">
-              <li>Se corrigieron y mejoraron las funcionalidades.</li>
-              <li>Importa cientos de miles de datos sin problemas.</li>
-              <li>Se añadieron nuevas funcionalidades.</li>
-              <li>Nuevos plugins y extensiones del software.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 2 -->
-      <div class="novedad-card" data-aos="zoom-in" data-aos-delay="100" style="flex:1; min-width:320px; display:flex; align-items:center;">
-        <img src="robot-hello.gif" alt="Robot animado saludando, novedades de EVAR Stat|Software de estadística" class="emoji" style="height: 5.5em; margin-right: 28px;" />
-        <div>
-          <div class="novedad-titulo">¿Preparado para EVAR Stat con IA?</div>
-          <div class="novedad-desc">
-            Dentro de poco el plugin de inteligencia artificial, además de su uso, facilitará significativamente la interpretación y comprensión de tus resultados.
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
   <!-- Pie de página -->
   <footer>
     <div class="container">
       <p>© 2025 EVAR Stat. Todos los derechos reservados.</p>
     </div>
   </footer>
-
-  <!-- Banner de cookies -->
-  <div id="cookie-banner" class="cookie-banner">
-    <p>
-      Este sitio utiliza cookies para mejorar tu experiencia.
-      <button id="accept-cookie">Entendido</button>
-    </p>
-  </div>
 
   <!-- Lightbox -->
   <div class="lightbox-overlay" id="lightbox">
@@ -405,13 +369,6 @@
       document.querySelectorAll('.policy-content').forEach(el => el.style.display = 'none');
       document.getElementById(id).style.display = 'block';
     }
-
-    // Aceptar cookies
-    const acceptCookieBtn = document.getElementById('accept-cookie');
-    const cookieBanner = document.getElementById('cookie-banner');
-    acceptCookieBtn.addEventListener('click', () => {
-      cookieBanner.style.display = 'none';
-    });
 
     // Efecto sticky animado en la navbar
     window.addEventListener('scroll', function() {
@@ -457,20 +414,6 @@
       once: true
     });
   </script>
-  <script>
-    // Banner de cookies
-    document.addEventListener('DOMContentLoaded', () => {
-      if (!localStorage.getItem('cookieAccepted')) {
-        const banner = document.getElementById('cookie-banner');
-        banner.classList.add('show');
-        document.getElementById('accept-cookie').addEventListener('click', () => {
-          localStorage.setItem('cookieAccepted', 'true');
-          banner.classList.remove('show');
-        });
-      }
-    });
-  </script>
-
 </body>
 </html>
 
@@ -495,4 +438,14 @@
   z-index: 2;
 }
 </style>
-
+<script>
+  document.querySelectorAll('a[href*="EVAR-Stat-3.0-winx64.exe"]').forEach(function(btn) {
+    btn.addEventListener('click', function(e) {
+      // Solo si es un click izquierdo y no es Ctrl+click o similar
+      if (e.button === 0 && !e.ctrlKey && !e.metaKey && !e.shiftKey) {
+        e.preventDefault();
+        window.location.href = this.href;
+      }
+    });
+  });
+</script>
