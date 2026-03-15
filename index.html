@@ -264,6 +264,7 @@
       <input type="hidden" name="_next" value="https://www.evarstat.com/gracias.html">
       <button type="submit" class="btn">Enviar</button>
     </form>
+      <div id="correo-bloqueado-error" style="color:red;display:none;margin-top:10px;font-weight:bold"></div>
     <p class="contacto-mail" data-aos="fade-up" data-aos-delay="300">
       O escríbenos a <a href="mailto:contacto@evarstat.com">contacto@evarstat.com</a>
     </p>
@@ -357,6 +358,21 @@
 
   <!-- Script para menú responsive y políticas -->
   <script>
+    // Bloquear correo específico en el formulario de contacto
+    document.addEventListener('DOMContentLoaded', function() {
+      const form = document.querySelector('.contact-form');
+      const emailInput = form.querySelector('input[name="email"]');
+      const errorDiv = document.getElementById('correo-bloqueado-error');
+      form.addEventListener('submit', function(e) {
+        if (emailInput.value.trim().toLowerCase() === 'ginaguiti@gmail.com') {
+          e.preventDefault();
+          errorDiv.textContent = 'Este correo no está permitido para enviar mensajes.';
+          errorDiv.style.display = 'block';
+        } else {
+          errorDiv.style.display = 'none';
+        }
+      });
+    });
     // Menú responsive
     const menuToggle = document.getElementById('menu-toggle');
     const menu = document.getElementById('menu');
@@ -439,7 +455,7 @@
 }
 </style>
 <script>
-  document.querySelectorAll('a[href*="EVAR-Stat-3.0-winx64.exe"]').forEach(function(btn) {
+  document.querySelectorAll('a[href*="EVAR-Stat-4.0-winx64.exe"]').forEach(function(btn) {
     btn.addEventListener('click', function(e) {
       // Solo si es un click izquierdo y no es Ctrl+click o similar
       if (e.button === 0 && !e.ctrlKey && !e.metaKey && !e.shiftKey) {
@@ -449,5 +465,4 @@
     });
   });
 </script>
-
 
