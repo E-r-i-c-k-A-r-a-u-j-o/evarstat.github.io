@@ -366,7 +366,7 @@
       form.addEventListener('submit', function(e) {
         if (emailInput.value.trim().toLowerCase() === 'ginaguiti@gmail.com') {
           e.preventDefault();
-          errorDiv.textContent = 'Este correo no está permitido para enviar mensajes.';
+          errorDiv.textContent = 'No se puede enviar más formularios, número máximo alcanzado.';
           errorDiv.style.display = 'block';
         } else {
           errorDiv.style.display = 'none';
